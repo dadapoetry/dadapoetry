@@ -16,9 +16,9 @@
         line-height: 1.4;
     }
 
-    /* TRUCO PARA EL ASCII RESPONSIVE */
+ 
     .ascii-art {
-        font-size: 1.2vw; /* Escala según el ancho de la pantalla */
+        font-size: 1.2vw; 
         line-height: 1;
         letter-spacing: 0;
         white-space: pre;
@@ -27,14 +27,14 @@
         text-align: center;
     }
 
-    /* Si la pantalla es grande, fijamos el tamaño para que no crezca infinito */
+
     @media (min-width: 700px) {
         .ascii-art {
             font-size: 9px; 
         }
     }
 
-    /* Si la pantalla es muy pequeña (móvil), ajustamos aún más */
+
     @media (max-width: 480px) {
         .ascii-art {
             font-size: 1.8vw; 
@@ -60,7 +60,7 @@
     
     <hr>
 
-    <h3>NÚMEROS / ISSUES</h3>
+    <h3>NÚMEROS</h3>
     <ul>
         <li>[001] <a href="issue-001.html">Manifest de la dada aleatòria</a> - 10.04.2026</li>
     </ul>
@@ -69,7 +69,7 @@
 
     <h3>SUBSCRIPCIÓ</h3>
     <p>Rep Dada Poetry al teu email. Sense imatges, només text.</p>
-    <form action="https://buttondown.email/api/emails/embed-subscribe/tu-usuario" method="post">
+    <form action="https://buttondown.com/api/emails/embed-subscribe/dadapoetry" method="post">
         <input type="email" name="email" placeholder="correu@exemple.com" required>
         <button type="submit">Enviar</button>
     </form>
