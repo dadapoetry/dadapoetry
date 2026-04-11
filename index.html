@@ -85,9 +85,9 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <span class="footer-label">Publicació</span>
-                Dada Poetry — Arxiu de dades poètiques i experiments visuals.<br>
-                ISSN: [En tràmit]<br>
-                Mataró, Catalunya.
+                Dada Poetry. Arxiu de dades poètiques i experiments visuals<br>
+                ISSN:<br>
+                Catalunya
             </div>
             <div class="footer-section">
                 <span class="footer-label">Subscripció</span>
@@ -109,37 +109,6 @@
             </div>
         </div>
     </footer>
-<script>
-            document.addEventListener("DOMContentLoaded", async function() {
-                // Selecciona tots els enllaços que tinguin la classe 'issue-link'
-                const links = document.querySelectorAll('.issue-link');
-                
-                for (let link of links) {
-                    const weightSpan = link.parentNode.querySelector('.issue-weight');
-                    
-                    try {
-                        // Va a buscar l'arxiu en silenci
-                        const response = await fetch(link.href);
-                        
-                        if (response.ok) {
-                            // Si l'arxiu existeix, en llegeix el text i el pesa
-                            const text = await response.text();
-                            const byteSize = new Blob([text]).size;
-                            const kbSize = (byteSize / 1024).toFixed(2);
-                            
-                            // Imprimeix el resultat
-                            weightSpan.innerText = "[AQUEST REGISTRE OCUPA " + kbSize + " KB DE MATÈRIA DIGITAL]";
-                        } else {
-                            // Si l'arxiu encara no l'has pujat (Error 404)
-                            weightSpan.innerText = `[BUIT]`;
-                        }
-                    } catch (error) {
-                        // Si hi ha un error de connexió
-                        weightSpan.innerText = `[ERROR DE DADES]`;
-                    }
-                }
-            });
-        </script>
     <script>
     document.addEventListener("DOMContentLoaded", async function() {
         const links = document.querySelectorAll('.issue-link');
@@ -152,11 +121,9 @@
                 if (response.ok) {
                     const text = await response.text();
                     
-                    // Càlcul del pes
                     const byteSize = new Blob([text]).size;
                     const kbSize = (byteSize / 1024).toFixed(2);
                     
-                    // Càlcul de la signatura (Hash SHA-256)
                     const msgBuffer = new TextEncoder().encode(text);
                     const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
                     const hashArray = Array.from(new Uint8Array(hashBuffer));
