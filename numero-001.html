@@ -21,55 +21,205 @@
         line-height: 1.4;
     }
 
-    hr { border: 0; border-top: 1px solid #000; margin: 20px 0; }
-    a { color: #000; font-weight: bold; }
-    input[type="email"] { border: 1px solid #000; padding: 5px; font-family: monospace; width: 100%; max-width: 250px; margin-bottom: 10px; }
-    button { background: #000; color: #fff; border: none; padding: 5px 15px; cursor: pointer; font-family: monospace; }
-
-    footer {
-        margin-top: 30px;
-        font-size: 0.9rem;
-        border-top: 1px solid #000;
-        padding-top: 20px;
-        text-align: left; 
-        color: #1a1a1a;
-        line-height: 1.8;
-    }
-
-    .footer-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-        gap: 10px;
-    }
-
-    @media (max-width: 480px) {
-        .footer-grid { grid-template-columns: 1fr; }
-    }
-
-    .footer-section {
-        margin-bottom: 10px;
-    }
-
-    .footer-label {
-        display: block;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 0.85rem;
-        letter-spacing: 0.05em;
-        margin-bottom: 5px;
-    }
-     #data-metric {
+  
+        .nav-root {
             font-family: monospace;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
+            margin-bottom: 50px;
+            display: block;
+        }
+
+   
+        header {
+            margin-bottom: 60px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+            margin: 0 0 5px 0;
+            line-height: 1.1;
+        }
+
+        .subtitle-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .log-id {
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .editorial-meta {
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #555;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .quote {
+            display: block;
+            margin-top: 15px;
+            font-style: italic;
+            font-size: 1.05rem;
+        }
+
+    
+        h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+     
+        h4.category {
+            font-family: monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        ul.contents-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        ul.contents-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .piece-title {
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        .piece-author {
+            color: #555;
+            font-style: italic;
+            margin-right: auto; 
+        }
+
+        .author-block {
+            margin-bottom: 30px;
+        }
+
+        .author-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 2px;
+        }
+
+        .author-contact {
+            font-family: monospace;
+            font-size: 0.85rem;
             color: #666;
-     }
-</style>
+            margin-bottom: 8px;
+        }
+
+        .author-bio {
+            font-size: 1.05rem;
+            color: #1a1a1a;
+            margin-left: 15px;
+            border-left: 2px solid #eee;
+            padding-left: 10px;
+        }
+
+   
+        a { color: #000; text-decoration: none; border-bottom: 1px solid #ccc; }
+        a:hover { border-bottom: 1px solid #000; background-color: #f9f9f9; }
+
+    
+        footer { margin-top: 80px; font-size: 0.85rem; border-top: 1px solid #000; padding-top: 20px; text-align: left; color: #1a1a1a; line-height: 1.8; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } ul.contents-list li { flex-direction: column; } .piece-author { margin-right: 0; margin-bottom: 5px; } }
+        .footer-section { margin-bottom: 15px; }
+        .footer-label { display: block; text-transform: uppercase; font-weight: bold; font-size: 0.75rem; letter-spacing: 0.05em; margin-bottom: 5px; }
+    </style>
 
 <body>
-    <h1 style="text-align:center;">DADA POETRY</h1>
-    <p style="text-align:center;">Dada és dadà. Dadà és dada. Arxiu de dades poètiques i experiments visuals.</p>
-    
-    <hr>
+   <a href="index.html" class="nav-root">← RETORN A L'ARREL [DADA POETRY]</a>
+
+    <header>
+        <h1>DADA POETRY</h1>
+        <div class="subtitle-block">
+            <span class="subtitle">Arxiu de dades poètiques i experiments visuals.</span>
+            <span class="log-id">[REGISTRE 001 — Juliol 2026]</span>
+        </div>
+        <div class="editorial-meta">
+            <div>ISSN: </div>
+            <div>Editor: Adrián Salcedo Toca</div>
+        </div>
+        <span class="quote">"Paratext</span>
+    </header>
+
+    <main>
+        <h3>Taula de Dades</h3>
+
+        <h4 class="category">/ TXT_ALFANUMÈRIC / (Poesia & Prosa)</h4>
+        <ul class="contents-list">
+            <li>
+                <a href="manifest.html" class="piece-title">Manifest de la dada aleatòria</a> 
+                <span class="piece-author">per Jo</span>
+            </li>
+            <li>
+                <a href="poema1.html" class="piece-title">El pes del buit</a> 
+                <span class="piece-author">per Autor Fictici</span>
+            </li>
+        </ul>
+
+        <h4 class="category">/ BINARI_VISUAL / (Gràfics & ASCII)</h4>
+        <ul class="contents-list">
+            <li>
+                <a href="ascii1.html" class="piece-title">Paisatge de servidors (ASCII)</a> 
+                <span class="piece-author">per Tal</span>
+            </li>
+            <li>
+                <a href="mapa.html" class="piece-title">Cartografia d'un error 404</a> 
+                <span class="piece-author">per Anon</span>
+            </li>
+        </ul>
+
+        <h4 class="category">/ DOC_PROTOCOL / (Documentals & Assaig)</h4>
+        <ul class="contents-list">
+            <li>
+                <a href="assaig.html" class="piece-title">La memòria dels cables submarins</a> 
+                <span class="piece-author">per Nosequi</span>
+            </li>
+        </ul>
+
+        <h3>Metadades d'Autoria (Col·laboradors)</h3>
+
+        <div class="author-block">
+            <div class="author-name">Autor Fictici</div>
+            <div class="author-contact">contacte@autorfictici.com | github.com/autorfictici</div>
+            <div class="author-bio">"Blablabla"</div>
+        </div>
+        </div>
+    </main>
 
     <footer>
         <div class="footer-grid">
