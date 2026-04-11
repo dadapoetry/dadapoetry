@@ -52,6 +52,12 @@
         letter-spacing: 0.05em;
         margin-bottom: 5px;
     }
+     #data-metric {
+            margin-top: 40px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: #666;
+     }
 </style>
 
 <body>
@@ -60,10 +66,21 @@
     
     <hr>
 
-    <h3>NÚMEROS</h3>
+    <h3>DIRECTORI</h3>
     <ul>
         <li>[001] <a href="issue-001.html">Manifest de la dada aleatòria</a> - 10.04.2026</li>
     </ul>
+    <div id="data-metric">
+            Aquesta idea pesa...
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var htmlContent = document.documentElement.outerHTML;
+                var byteSize = new Blob([htmlContent]).size;
+                var kbSize = (byteSize / 1024).toFixed(2);
+                document.getElementById('data-metric').innerText = "[PES D'AQUEST REGISTRE: " + kbSize + " KB]";
+            });
+        </script>
     <footer>
         <div class="footer-grid">
             <div class="footer-section">
@@ -74,7 +91,7 @@
             </div>
             <div class="footer-section">
                 <span class="footer-label">Subscripció</span>
-                Rep els nous números via correu electrònic.<br>
+                Rep els nous registres via correu.<br>
                 <form action="https://buttondown.com/api/emails/embed-subscribe/dadapoetry" method="post">
         <input type="email" name="email" placeholder="correu@exemple.com" required>
         <button type="submit">Enviar</button>
@@ -86,10 +103,9 @@
             </div>
             <div class="footer-section">
                 <span class="footer-label">Drets</span>
-                Els drets de les obres individuals pertanyen als seus autors.<br>
-                Es permet la reproducció de números complets amb finalitats no comercials, 
-            sempre que se'n citi la font.<br>
-                Allotjat a <a href="https://github.com/dadapoetry/" target="_blank">GitHub Pages</a>.
+                Els drets de les obres pertanyen als autors.<br>
+                Reproducció permesa amb finalitats no comercials.<br>
+                Codi obert a <a href="https://github.com/dadapoetry/" target="_blank">GitHub</a>.
             </div>
         </div>
     </footer>
