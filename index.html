@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DADA POETRY</title>
     <style>
+    @media print {
+        body { font-size: 12pt; color: #000; background: #fff; }
+        footer .footer-grid, form, button { display: none; }
+        a { text-decoration: none; color: #000; }
+        a::after { content: " (" attr(href) ")"; font-size: 0.8em; font-family: monospace; }
+        h1::after { content: " - DOCUMENT IMPRÈS DE L'ARXIU"; font-size: 10pt; display: block; margin-top: 10px; }
+    }
     body {
         background-color: #ffffff;
         color: #000000;
@@ -133,5 +140,37 @@
                 }
             });
         </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", async function() {
+        const links = document.querySelectorAll('.issue-link');
+        
+        for (let link of links) {
+            const weightSpan = link.parentNode.querySelector('.issue-weight');
+            
+            try {
+                const response = await fetch(link.href);
+                if (response.ok) {
+                    const text = await response.text();
+                    
+                    // Càlcul del pes
+                    const byteSize = new Blob([text]).size;
+                    const kbSize = (byteSize / 1024).toFixed(2);
+                    
+                    // Càlcul de la signatura (Hash SHA-256)
+                    const msgBuffer = new TextEncoder().encode(text);
+                    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+                    const hashArray = Array.from(new Uint8Array(hashBuffer));
+                    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').substring(0, 8);
+                    
+                    weightSpan.innerText = "[AQUEST REGISTRE OCUPA " + kbSize + " KB DE MATÈRIA DIGITAL | ID: " + hashHex + "]";
+                } else {
+                    weightSpan.innerText = `[BUIT]`;
+                }
+            } catch (error) {
+                weightSpan.innerText = `[ERROR DE DADES]`;
+            }
+        }
+    });
+</script>
 </body>
 </html>
