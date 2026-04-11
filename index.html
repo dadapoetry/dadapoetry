@@ -19,6 +19,39 @@
     a { color: #000; font-weight: bold; }
     input[type="email"] { border: 1px solid #000; padding: 5px; font-family: monospace; width: 100%; max-width: 250px; margin-bottom: 10px; }
     button { background: #000; color: #fff; border: none; padding: 5px 15px; cursor: pointer; font-family: monospace; }
+
+    footer {
+        margin-top: 150px;
+        font-size: 0.9rem;
+        border-top: 1px solid #000;
+        padding-top: 40px;
+        text-align: left; 
+        color: #1a1a1a;
+        line-height: 1.8;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px;
+    }
+
+    @media (max-width: 480px) {
+        .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-label {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        margin-bottom: 5px;
+    }
 </style>
 
 <body>
@@ -40,6 +73,35 @@
         <input type="email" name="email" placeholder="correu@exemple.com" required>
         <button type="submit">Enviar</button>
     </form>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <span class="footer-label">Publicació</span>
+                Dada Poetry — Arxiu de dades i experiments.<br>
+                ISSN: [En tràmit]<br>
+                Mataró, Catalunya.
+            </div>
+            <div class="footer-section">
+                <span class="footer-label">Subscripció</span>
+                Rep els nous números via correu electrònic.<br>
+                <a href="https://buttondown.email/dadapoetry">Subscriu-te</a>
+            </div>
+            <div class="footer-section">
+                <span class="footer-label">Contacte i Obres</span>
+                Col·labora. <br>
+                <a href="mailto:dada@dadapoetry.cat">dada@dadapoetry.cat</a>
+            </div>
+            <div class="footer-section">
+                <span class="footer-label">Arxiu</span>
+                Allotjat a GitHub Pages.<br>
+                Codi obert i dades lliures.
+            </div>
+        </div>
+        <div style="margin-top: 40px; font-style: italic; color: #777;">
+            Dada és dadà. 2026.
+        </div>
+    </footer>
 
 </body>
 </html>
