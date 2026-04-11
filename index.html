@@ -67,18 +67,11 @@
 
     <h3>DIRECTORI</h3>
     <ul>
-        <li>[001] <a href="issue-001.html">Manifest de la dada aleatòria</a> - 10.04.2026 -
-        <div id="data-metric">
-            Calculant el pes del registre...
-        </div>
-            <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var htmlContent = document.documentElement.outerHTML;
-                var byteSize = new Blob([htmlContent]).size;
-                var kbSize = (byteSize / 1024).toFixed(2);
-                document.getElementById('data-metric').innerText = "[AQUEST REGISTRE OCUPA " + kbSize + " KB DE MATÈRIA DIGITAL]";
-            });
-        </script>
+        <li>
+            <span style="font-family: monospace;">[001]</span> 
+            <a href="issue-001.html" class="issue-link">Manifest de la dada aleatòria</a> 
+            <span class="issue-weight" style="font-family: monospace; font-size: 0.85rem; color: #666;">Calculant el pes...</span> 
+            — 2026-04-11
         </li>
     </ul>      
     <footer>
@@ -109,6 +102,36 @@
             </div>
         </div>
     </footer>
-
+<script>
+            document.addEventListener("DOMContentLoaded", async function() {
+                // Selecciona tots els enllaços que tinguin la classe 'issue-link'
+                const links = document.querySelectorAll('.issue-link');
+                
+                for (let link of links) {
+                    const weightSpan = link.parentNode.querySelector('.issue-weight');
+                    
+                    try {
+                        // Va a buscar l'arxiu en silenci
+                        const response = await fetch(link.href);
+                        
+                        if (response.ok) {
+                            // Si l'arxiu existeix, en llegeix el text i el pesa
+                            const text = await response.text();
+                            const byteSize = new Blob([text]).size;
+                            const kbSize = (byteSize / 1024).toFixed(2);
+                            
+                            // Imprimeix el resultat
+                            weightSpan.innerText = "[AQUEST REGISTRE OCUPA " + kbSize + " KB DE MATÈRIA DIGITAL]";
+                        } else {
+                            // Si l'arxiu encara no l'has pujat (Error 404)
+                            weightSpan.innerText = `[BUIT]`;
+                        }
+                    } catch (error) {
+                        // Si hi ha un error de connexió
+                        weightSpan.innerText = `[ERROR DE DADES]`;
+                    }
+                }
+            });
+        </script>
 </body>
 </html>
