@@ -129,7 +129,7 @@
                     const hashArray = Array.from(new Uint8Array(hashBuffer));
                     const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').substring(0, 8);
                     
-                    weightSpan.innerText = "[AQUEST REGISTRE OCUPA " + kbSize + " KB DE MATÈRIA DIGITAL | ID: " + hashHex + "]";
+                    weightSpan.innerText = "[" + kbSize + " KB DE MATÈRIA DIGITAL | ID: " + hashHex + "]";
                 } else {
                     weightSpan.innerText = `[BUIT]`;
                 }
