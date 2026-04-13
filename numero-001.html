@@ -94,36 +94,24 @@
         <h4>/ TXT_ALFANUMÈRIC / (Poesia & Prosa)</h4>
         <ul>
             <li>
-                <a href="manifest.html" class="issue-link">Manifest de la dada aleatòria</a> 
-                <span class="issue-weight" style="font-family: monospace; font-size: 0.85rem; color: #666;">Calculant el pes...</span>
+                <a href="manifest.html" class="piece-link" data-piece-id="manifest_001">>Manifest de la dada aleatòria</a> 
+                <span class="piece-metrics" style="font-family: monospace; font-size: 0.85rem; color: #666;">Calculant la densitat...</span>
                 <span style="font-family: monospace;">per Jo</span>
-            </li>
-            <li>
-                <a href="poema1.html" class="issue-link">El pes del buit</a> 
-                <span class="issue-weight" style="font-family: monospace; font-size: 0.85rem; color: #666;">Calculant el pes...</span>
-                <span style="font-family: monospace;">per Autor Fictici</span>
             </li>
         </ul>
 
         <h4>/ BINARI_VISUAL / (Gràfics & ASCII)</h4>
         <ul>
             <li>
-                <a href="ascii1.html" class="issue-link">Paisatge de servidors (ASCII)</a> 
-                <span class="issue-weight" style="font-family: monospace; font-size: 0.85rem; color: #666;">Calculant el pes...</span>
+                <a href="ascii1.html">Paisatge de servidors (ASCII)</a> 
                 <span style="font-family: monospace;">per Tal</span>
-            </li>
-            <li>
-                <a href="mapa.html" class="issue-link">Cartografia d'un error 404</a> 
-                <span class="issue-weight" style="font-family: monospace; font-size: 0.85rem; color: #666;">Calculant el pes...</span>
-                <span style="font-family: monospace;">per Anon</span>
             </li>
         </ul>
 
         <h4>/ DOC_PROTOCOL / (Documentals & Assaig)</h4>
         <ul>
             <li>
-                <a href="assaig.html" class="issue-link">La memòria dels cables submarins</a> 
-                <span class="issue-weight" style="font-family: monospace; font-size: 0.85rem; color: #666;">Calculant el pes...</span>
+                <a href="assaig.html">La memòria dels cables submarins</a> 
                 <span style="font-family: monospace;">per Nosequi</span>
             </li>
         </ul>
@@ -180,34 +168,62 @@
         </div>
     </footer>
     <script>
-    document.addEventListener("DOMContentLoaded", async function() {
-        const links = document.querySelectorAll('.issue-link');
-        
-        for (let link of links) {
-            const weightSpan = link.parentNode.querySelector('.issue-weight');
+        const espaiNoms = "dadapoetry_arxiu";
+
+        document.addEventListener("DOMContentLoaded", async function() {
+
+            const links = document.querySelectorAll('.piece-link');
             
-            try {
-                const response = await fetch(link.href);
-                if (response.ok) {
-                    const text = await response.text();
+            for (let link of links) {
+                const metricsSpan = link.parentNode.querySelector('.piece-metrics');
+                const pieceID = link.getAttribute('data-piece-id'); 
+                
+                try {
+
+                    const resVisites = await fetch(`https://api.counterapi.dev/v1/${espaiNoms}/visites_${pieceID}`);
+                    const dataVisites = await resVisites.json();
+                    const visites = dataVisites.count || 0;
+
+                    const resLectures = await fetch(`https://api.counterapi.dev/v1/${espaiNoms}/lectures_${pieceID}`);
+                    const dataLectures = await resLectures.json();
+                    const lectures = dataLectures.count || 0;
+
+                    let abandonament = 0;
+                    if (visites > 0) {
+                        abandonament = Math.round(((visites - lectures) / visites) * 100);
+                    }
+
+                    let concepte = "";
+                    if (abandonament >= 80) {
+                        concepte = "Alta densitat digital";
+                    } else if (abandonament >= 50) {
+                        concepte = "Densitat digital mitja";
+                    } else if (abandonament >= 20) {
+                        concepte = "Baixa densitat digital";
+                    } else {
+                        concepte = "Fricció nul·la"; 
+                    }
+
+                    let kbSize = "?.??";
+                    try {
+                        const resArxiu = await fetch(link.href);
+                        if (resArxiu.ok) {
+                            const text = await resArxiu.text();
+                            const byteSize = new Blob([text]).size;
+                            kbSize = (byteSize / 1024).toFixed(2);
+                        }
+                    } catch (e) {}
+
+                    metricsSpan.innerText = ` [${kbSize} KB] [Taxa d'abandonament: ${abandonament}% -> ${concepte}]`;
+                    metricsSpan.style.fontFamily = "monospace";
+                    metricsSpan.style.fontSize = "0.85em";
+                    metricsSpan.style.color = "#555";
                     
-                    const byteSize = new Blob([text]).size;
-                    const kbSize = (byteSize / 1024).toFixed(2);
-                    
-                    const msgBuffer = new TextEncoder().encode(text);
-                    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-                    const hashArray = Array.from(new Uint8Array(hashBuffer));
-                    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').substring(0, 8);
-                    
-                    weightSpan.innerText = "[" + kbSize + " KB DE MATÈRIA DIGITAL | ID: " + hashHex + "]";
-                } else {
-                    weightSpan.innerText = `[BUIT]`;
+                } catch (e) {
+                    metricsSpan.innerText = ` [SISTEMA OFFLINE - DADA INACCESSIBLE]`;
                 }
-            } catch (error) {
-                weightSpan.innerText = `[ERROR DE DADES]`;
             }
-        }
-    });
-</script>
+        });
+    </script>
 </body>
 </html>
