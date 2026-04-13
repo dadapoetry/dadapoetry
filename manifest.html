@@ -108,23 +108,34 @@
             </div>
         </div>
     </footer>
-    <script>
-       
+<script type="module">
+  
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+
+        const firebaseConfig = {
+            databaseURL: "https://dadapoetry-e3301-default-rtdb.europe-west1.firebasedatabase.app/"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        
+
         const pieceID = "manifest_001"; 
-        const espaiNoms = "dadapoetry_arxiu";
+        const docRef = ref(db, `metriques/${pieceID}`);
 
         document.addEventListener("DOMContentLoaded", function() {
      
-            fetch(`https://api.counterapi.dev/v1/${espaiNoms}/visites_${pieceID}/up`);
+            update(docRef, { visites: increment(1) }).catch(e => console.log(e));
 
+      
             const finalDocument = document.querySelector('footer') || document.body;
-            
             if (finalDocument) {
                 const observador = new IntersectionObserver((entrades) => {
-      
                     if (entrades[0].isIntersecting) {
-                        fetch(`https://api.counterapi.dev/v1/${espaiNoms}/lectures_${pieceID}/up`);
-                        observador.disconnect();
+                        update(docRef, { lectures: increment(1) });
+                        observador.disconnect(); 
                     }
                 });
                 observador.observe(finalDocument);
