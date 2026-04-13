@@ -109,30 +109,64 @@
             </div>
         </div>
     </footer>
-    <script>
+  <script>
     document.addEventListener("DOMContentLoaded", async function() {
-        const links = document.querySelectorAll('.issue-link');
+
+        const issueLinks = document.querySelectorAll('.issue-link');
         
-        for (let link of links) {
+        for (let link of issueLinks) {
             const weightSpan = link.parentNode.querySelector('.issue-weight');
             
             try {
+           
                 const response = await fetch(link.href);
-                if (response.ok) {
-                    const text = await response.text();
-                    
-                    const byteSize = new Blob([text]).size;
-                    const kbSize = (byteSize / 1024).toFixed(2);
-                    
-                    const msgBuffer = new TextEncoder().encode(text);
-                    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-                    const hashArray = Array.from(new Uint8Array(hashBuffer));
-                    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').substring(0, 8);
-                    
-                    weightSpan.innerText = "[" + kbSize + " KB DE MATÈRIA DIGITAL | ID: " + hashHex + "]";
-                } else {
+                if (!response.ok) {
                     weightSpan.innerText = `[BUIT]`;
+                    continue;
                 }
+                
+                const issueHtmlText = await response.text();
+                
+                let totalByteSize = new Blob([issueHtmlText]).size;
+                let combinedTextForHash = issueHtmlText;
+                
+        
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(issueHtmlText, "text/html");
+                
+
+                const pieceLinks = doc.querySelectorAll('.piece-link');
+                const baseUrl = new URL(link.href); 
+ 
+                const fetchPromises = Array.from(pieceLinks).map(async (pieceLink) => {
+                    try {
+                        const pieceUrl = new URL(pieceLink.getAttribute('href'), baseUrl);
+                        const pieceRes = await fetch(pieceUrl);
+                        if (pieceRes.ok) {
+                            return await pieceRes.text();
+                        }
+                    } catch (e) {
+     
+                    }
+                    return "";
+                });
+                
+                const piecesTexts = await Promise.all(fetchPromises);
+   
+                for (const text of piecesTexts) {
+                    totalByteSize += new Blob([text]).size;
+                    combinedTextForHash += text;
+                }
+
+                const kbSize = (totalByteSize / 1024).toFixed(2);
+
+                const msgBuffer = new TextEncoder().encode(combinedTextForHash);
+                const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').substring(0, 8);
+                
+                weightSpan.innerText = `[${kbSize} KB DE MATÈRIA DIGITAL | ID: ${hashHex}]`;
+                
             } catch (error) {
                 weightSpan.innerText = `[ERROR DE DADES]`;
             }
