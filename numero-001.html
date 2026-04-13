@@ -205,7 +205,7 @@
                     if (abandonament >= 80) concepte = "Alta densitat digital";
                     else if (abandonament >= 50) concepte = "Densitat digital mitja";
                     else if (abandonament >= 20) concepte = "Baixa densitat digital";
-                    else concepte = "Fricció nul·la"; 
+                    else concepte = "Densitat nul·la"; 
 
                 
                     let kbSize = "?.??";
@@ -219,7 +219,7 @@
                     } catch (e) {}
 
               
-                    metricsSpan.innerText = ` [${kbSize} KB] [Nòdes: ${visites} | Abandonament: ${abandonament}% -> ${concepte}]`;
+                    metricsSpan.innerText = ` [${kbSize} KB] [ Abandonament: ${abandonament}% -> ${concepte} ]`;
                     metricsSpan.style.fontFamily = "monospace";
                     metricsSpan.style.fontSize = "0.85em";
                     metricsSpan.style.color = "#555";
