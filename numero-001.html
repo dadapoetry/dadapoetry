@@ -202,10 +202,10 @@
 
                    
                     let concepte = "";
-                    if (abandonament >= 80) concepte = "Alta densitat digital";
-                    else if (abandonament >= 50) concepte = "Densitat digital mitja";
-                    else if (abandonament >= 20) concepte = "Baixa densitat digital";
-                    else concepte = "Densitat nul·la"; 
+                    if (abandonament >= 80) concepte = "ALTA DENSITAT DIGITAL";
+                    else if (abandonament >= 50) concepte = "DENSITAT DIGITAL MITJA";
+                    else if (abandonament >= 20) concepte = "BAIXA DENSITAT DIGITAL";
+                    else concepte = "DENSITAT NUL·LA"; 
 
                 
                     let kbSize = "?.??";
@@ -219,7 +219,7 @@
                     } catch (e) {}
 
               
-                    metricsSpan.innerText = ` [${kbSize} KB] [Taxa d'abandonament: ${abandonament}% -> ${concepte}]`;
+                    metricsSpan.innerText = ` [${kbSize} KB] [TAXA D'ABANDONAMENT: ${abandonament}% -> ${concepte}]`;
                     metricsSpan.style.fontFamily = "monospace";
                     metricsSpan.style.fontSize = "0.85em";
                     metricsSpan.style.color = "#555";
