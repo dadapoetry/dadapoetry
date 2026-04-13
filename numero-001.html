@@ -167,43 +167,47 @@
             </div>
         </div>
     </footer>
-    <script>
-        const espaiNoms = "dadapoetry_arxiu";
+<script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+        const firebaseConfig = {
+            databaseURL: "https://dadapoetry-e3301-default-rtdb.europe-west1.firebasedatabase.app/"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
 
         document.addEventListener("DOMContentLoaded", async function() {
-
             const links = document.querySelectorAll('.piece-link');
             
             for (let link of links) {
                 const metricsSpan = link.parentNode.querySelector('.piece-metrics');
-                const pieceID = link.getAttribute('data-piece-id'); 
+                const pieceID = link.getAttribute('data-piece-id');
+                const docRef = ref(db, `metriques/${pieceID}`);
                 
                 try {
+                   
+                    const snapshot = await get(docRef);
+                    const dades = snapshot.val() || { visites: 0, lectures: 0 };
+                    
+                    const visites = dades.visites || 0;
+                    const lectures = dades.lectures || 0;
 
-                    const resVisites = await fetch(`https://api.counterapi.dev/v1/${espaiNoms}/visites_${pieceID}`);
-                    const dataVisites = await resVisites.json();
-                    const visites = dataVisites.count || 0;
-
-                    const resLectures = await fetch(`https://api.counterapi.dev/v1/${espaiNoms}/lectures_${pieceID}`);
-                    const dataLectures = await resLectures.json();
-                    const lectures = dataLectures.count || 0;
-
+             
                     let abandonament = 0;
                     if (visites > 0) {
                         abandonament = Math.round(((visites - lectures) / visites) * 100);
                     }
 
+                   
                     let concepte = "";
-                    if (abandonament >= 80) {
-                        concepte = "Alta densitat digital";
-                    } else if (abandonament >= 50) {
-                        concepte = "Densitat digital mitja";
-                    } else if (abandonament >= 20) {
-                        concepte = "Baixa densitat digital";
-                    } else {
-                        concepte = "Fricció nul·la"; 
-                    }
+                    if (abandonament >= 80) concepte = "Alta densitat digital";
+                    else if (abandonament >= 50) concepte = "Densitat digital mitja";
+                    else if (abandonament >= 20) concepte = "Baixa densitat digital";
+                    else concepte = "Fricció nul·la"; 
 
+                
                     let kbSize = "?.??";
                     try {
                         const resArxiu = await fetch(link.href);
@@ -214,13 +218,15 @@
                         }
                     } catch (e) {}
 
-                    metricsSpan.innerText = ` [${kbSize} KB] [Taxa d'abandonament: ${abandonament}% -> ${concepte}]`;
+              
+                    metricsSpan.innerText = ` [${kbSize} KB] [Nòdes: ${visites} | Abandonament: ${abandonament}% -> ${concepte}]`;
                     metricsSpan.style.fontFamily = "monospace";
                     metricsSpan.style.fontSize = "0.85em";
                     metricsSpan.style.color = "#555";
                     
                 } catch (e) {
-                    metricsSpan.innerText = ` [SISTEMA OFFLINE - DADA INACCESSIBLE]`;
+                    console.error(e);
+                    metricsSpan.innerText = ` [SISTEMA OFFLINE]`;
                 }
             }
         });
