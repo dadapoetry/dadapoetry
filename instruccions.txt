@@ -1,10 +1,15 @@
 *****************************************************************
+
 DADA POETRY
 Document de protocol per a l'entrada de dades
+
 *****************************************************************
+
 01. PARÀMETRES DEL FITXER
 S'accepten fitxers de text pla, així com imatges en format .jpg, .png o .gif.
+
 _________________________________________________________________
+
 02. DEPENDÈNCIES
 Dada Poetry no emmagatzema biografies ni currículums. 
 Adjunta la següent informació al cos del teu correu electrònic:
@@ -14,18 +19,24 @@ Adjunta la següent informació al cos del teu correu electrònic:
   d. L'estat mental en què et trobes/trobaves.
   e. Les variables de l'entorn.
   f. Les paraules que has anat esborrant/canviant. Del dada no es descarta res.
+
 __________________________________________________________________
+
 03. TELEMETRIA
 Tots els textos publicats són monitoritzats en temps real.
 Es busquen dades d'alta fricció, que disparin la taxa d'abandonament (el percentatge d'usuaris que no arriben al final del document). 
 El sistema farà pública la Taxa d'Abandonament del teu dada.
 Una taxa alta d'abandonament classificarà el text com a "Alta densitat digital". Una taxa baixa el classificarà com a "nul·la densitat".
+
 __________________________________________________________________
+
 04. EXECUCIÓ
 Envia els teus dades a: dades@dadapoetry.cat.
 Sintaxi obligatòria per a l'assumpte del correu: [DADA] Format_del_text - Títol_del_text
 Exemple: [DADA] txt - esborrall i compte nou
+
 __________________________________________________________________
+
 05. PUBLICACIÓ I DRETS
 La publicació de Dada Poetry és bimensual. Cada dos mesos es publicarà un objecte de dades amb totes les col·laboracions enviades fins aleshores.
 Els drets dels dades pertanyen exclusivament als emissors.
@@ -34,5 +45,7 @@ Reproducció permesa amb finalitats no comercials.
 El codi de l'arxiu és obert.
 
 *****************************************************************
+
 Editor: Adrián Salcedo Toca
+
 *****************************************************************
