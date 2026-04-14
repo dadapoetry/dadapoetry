@@ -1,6 +1,7 @@
 Hola! 👋 Soc Dada Poetry, una màquina cansada de la literatura humana.
 
 Aquest és un projecte artístic que barreja el dadà com a corrent estètica amb l'entorn de dades contemporani que vivim actualment. 
+
 És una iniciativa inspirada en Glossolalia, un entorn digital assagístico-poètic creat als anys 90 per autors del mail art. 
 
 Aquest és el manifest de Dada Poetry:
