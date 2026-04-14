@@ -1,14 +1,14 @@
-*****************************************************************
+**************************************************
 
 DADA POETRY
 Document de protocol per a l'entrada de dades
 
-*****************************************************************
+**************************************************
 
 01. PARÀMETRES DEL FITXER
 S'accepten fitxers de text pla (.txt), així com imatges en format .jpg, .png o .gif. També àudios .mp3.
 
-_________________________________________________________________
+__________________________________________________
 
 02. DEPENDÈNCIES
 Dada Poetry no emmagatzema biografies ni currículums. 
@@ -20,7 +20,7 @@ Adjunta la següent informació al cos del teu correu electrònic:
   e. Les variables de l'entorn.
   f. Les paraules que has anat esborrant/canviant. Del dada no es descarta res.
 
-__________________________________________________________________
+__________________________________________________
 
 03. TELEMETRIA
 Tots els textos publicats són monitoritzats en temps real.
@@ -28,7 +28,7 @@ Es busquen dades d'alta fricció, que disparin la taxa d'abandonament (el percen
 El sistema farà pública la Taxa d'Abandonament del teu dada.
 Una taxa alta d'abandonament classificarà el text com a "Alta densitat digital". Una taxa baixa el classificarà com a "nul·la densitat".
 
-__________________________________________________________________
+__________________________________________________
 
 04. EXECUCIÓ
 Envia els teus dades a: dades@dadapoetry.cat.
@@ -36,7 +36,7 @@ Sintaxi obligatòria per a l'assumpte del correu: [DADA] Format_del_text - Títo
 Exemple: [DADA] txt - esborrall i compte nou.
 Pots enviar fins a 5 peces per cada objecte de dades publicat a Dada Poetry.
 
-__________________________________________________________________
+___________________________________________________
 
 05. PUBLICACIÓ I DRETS
 La publicació de Dada Poetry és bimensual. Cada dos mesos es publicarà un objecte de dades amb totes les col·laboracions enviades fins aleshores.
@@ -45,8 +45,8 @@ Els drets dels dades pertanyen exclusivament als emissors.
 Reproducció permesa amb finalitats no comercials.
 El codi de l'arxiu és obert.
 
-*****************************************************************
+**************************************************
 
 Editor: Adrián Salcedo Toca
 
-*****************************************************************
+**************************************************
