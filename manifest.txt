@@ -43,6 +43,25 @@ Executant...
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+METADADES
+
+Editor
+ ├─ nom_arxiu_enviat = "manifest.txt"
+ ├─ bateria_dispositiu = 5%
+ ├─ software = "github"
+ ├─ estat_mental = "trastorn inespecífic"
+ │   └─ errors = "ser real"
+ ├─ variables_entorn:
+ │   ├─ input_01 = "cafè fred"
+ │   ├─ input_02 = "atur"
+ │   └─ input_03 = "ansietat asíncrona"
+ └─ paraules_esborrades:
+     ├─ dump_1 = "prou"
+     ├─ dump_2 = "Temps era temps"
+     └─ dump_3 = "imparablement"
+
+________________________________________________________________
+
 La publicació de Dada Poetry és bimensual. Cada dos mesos es publicarà un objecte de dades amb totes les col·laboracions enviades fins aleshores.
 Els drets dels dades pertanyen exclusivament als emissors.
 
