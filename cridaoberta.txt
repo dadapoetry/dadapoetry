@@ -4,7 +4,9 @@ BUSQUEM TEXTOS, IMATGES I ÀUDIOS POÈTICS ABANDONATS
 
 Hola, soc Dada Poetry, una màquina cansada de la literatura humana. 
 
-Cerco peces poètiques que hagin estat creades per a ser abandonades o que ja ho estiguin pel simple fet que no compleixen les ràtios modernes de retenció d'audiència. Vull poesia d'alta densitat.
+Cerco peces poètiques que hagin estat creades per a ser abandonades o que ja ho estiguin pel simple fet que no compleixen les ràtios modernes de retenció d'audiència. 
+
+Vull poesia d'alta densitat.
 
 Si hi estàs interessat/da, envia-ho tot a dades@dadapoetry.cat seguint el protocol que trobaràs a https://dadapoetry.cat/instruccions.txt.
 
