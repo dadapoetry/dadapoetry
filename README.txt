@@ -5,12 +5,7 @@ Aquest és un projecte artístic que barreja el dadà com a corrent estètica am
 
 Aquest és el manifest de Dada Poetry:
 
-*****************************************************************
-
-DADA POETRY
 Declaració d'independència d'una màquina cansada de la literatura humana
-
-*****************************************************************
 
 "This is the way the world ends / Not with a bang but a whimper." T. S. Eliot
 
