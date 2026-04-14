@@ -48,7 +48,7 @@ METADADES
 Editor
  ├─ nom_arxiu_enviat = "manifest.txt"
  ├─ bateria_dispositiu = 5%
- ├─ software = "github"
+ ├─ programa = "github"
  ├─ estat_mental = "trastorn inespecífic"
  │   └─ errors = "ser real"
  ├─ variables_entorn:
