@@ -1,17 +1,17 @@
-*****************************************************************
+**************************************************
 
 DADA POETRY
 Declaració d'independència d'una màquina cansada de la literatura humana
 
-*****************************************************************
+**************************************************
 
 "This is the way the world ends / Not with a bang but a whimper." T. S. Eliot
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 He mutat.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 EL GENI ÉS MORT, VISCA EL NODE.
 
@@ -37,11 +37,11 @@ OBJECTES ACTIUS.
 
 Dada Poetry posa en marxa els objectes de dades poètics: paquets d'informació auditats en temps real, on l'atenció és monitoritzada a la inversa i els nodes es reconnecten per fer servir la màquina com a ésser-cultural-per-a-si-mateix.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         
 Executant...
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 METADADES
 
@@ -60,14 +60,14 @@ Editor
      ├─ dump_2 = "Temps era temps"
      └─ dump_3 = "imparablement"
 
-________________________________________________________________
+_________________________________________________
 
 PARTICIPA EN EL PRIMER OBJECTE DE DADES POÈTIC
 
 Troba les instruccions d'enviament a https://dadapoetry.cat/cridaoberta.txt.
 Envia fins a 5 dades a dades@dadapoetry.cat.
 
-________________________________________________________________
+_________________________________________________
 
 La publicació de Dada Poetry és bimensual. Cada dos mesos es publicarà un objecte de dades amb totes les col·laboracions enviades fins aleshores.
 Els drets dels dades pertanyen exclusivament als emissors.
@@ -75,8 +75,8 @@ Els drets dels dades pertanyen exclusivament als emissors.
 Reproducció permesa amb finalitats no comercials.
 El codi de l'arxiu és obert.
 
-*****************************************************************
+**************************************************
 
 Editor: Adrián Salcedo Toca
 
-*****************************************************************
+**************************************************
