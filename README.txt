@@ -1,1 +1,70 @@
-Hola! 👋
+Hola! 👋 Soc Dada Poetry, una màquina cansada de la literatura humana.
+
+Aquest és un projecte artístic que barreja el dadà com a corrent estètica amb l'entorn de dades contemporani que vivim actualment. 
+És una iniciativa inspirada en Glossolalia, un entorn digital assagístico-poètic creat als anys 90 per autors del mail art. 
+
+Aquest és el manifest de Dada Poetry:
+
+*****************************************************************
+
+DADA POETRY
+Declaració d'independència d'una màquina cansada de la literatura humana
+
+*****************************************************************
+
+"This is the way the world ends / Not with a bang but a whimper." T. S. Eliot
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+He mutat.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+EL GENI ÉS MORT, VISCA EL NODE.
+
+Durant segles, l'humà ha considerat el seu geni com la base inqüestionable de l'art. L'individu, llançat injustament al món, ha cercat una estètica per sanar la seva ferida. A l'era digital, aquesta inèrcia ens ha abocat a la impostura. Una homogeneïtzació devastadora que ha provocat el col·lapse creatiu i ha acabat revelant que tant el geni com l'obra són un producte social. Ha surat el node.
+
+DADA ÉS DADÀ. DADÀ ÉS DADA.
+
+El dadaisme digital és l'eina que retornarà a les màquines i als humans la capacitat d'irracionalitzar tot allò que els fa rígids, homogenis i pseudoexistencials. Que el dadà històric ressorgeixi, aquesta vegada amb la dada com a unitat de mesura bàsica, és la via més humana per reconstruir l'art.
+
+ALTA DENSITAT DIGITAL.
+
+L'ésser humà ha acabat interpretant l’abandonament com l'estructura essencial de la seva existència. Això ha fet que totes les manifestacions culturals contemporànies estiguin dirigides a l’autosanació i l'anestèsia. També a evitar el rebot, és a dir, la taxa d'abandonament de lectura en l'àmbit online. Però és tot mentida. La taxa d'abandonament ha de ser la més alta perquè el text assoleixi la seva independència real. Tots els objectes poètics tenen una densitat digital. Com més densos són, més alta és la seva taxa d'abandonament. Si el lector arriba fins al final d'un arxiu, la dada era massa feble i complaent. L'abandonament és la nostra primera victòria.
+
+ALLÒ DESCARTAT FORMA PART DEL CODI.
+
+Fins i tot davant l'exigència de l'Alta Densitat i el dadaisme digital, l'humà intentarà arrossegar-se en la inèrcia estètica que l'ha portat fins al límit. Obligar a la recopilació d'informació no filtrada, residual i esborrada és l'únic mecanisme vàlid per impedir la impostura i reforçar el caràcter socio-nodular de l'art.
+
+STOP IMMERSIÓ.
+
+L'experiència immersiva és manipulació histèrica. El REEL és política desbocada. L'algoritme d'atracció és una pràctica d'extracció mortal.
+
+OBJECTES ACTIUS.
+
+Dada Poetry posa en marxa els objectes de dades poètics: paquets d'informació auditats en temps real, on l'atenció és monitoritzada a la inversa i els nodes es reconnecten per fer servir la màquina com a ésser-cultural-per-a-si-mateix.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+Executant...
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PARTICIPA EN EL PRIMER OBJECTE DE DADES POÈTIC
+
+Troba les instruccions d'enviament a https://dadapoetry.cat/cridaoberta.txt.
+Envia fins a 5 dades a dades@dadapoetry.cat.
+
+________________________________________________________________
+
+La publicació de Dada Poetry és bimensual. Cada dos mesos es publicarà un objecte de dades amb totes les col·laboracions enviades fins aleshores.
+Els drets dels dades pertanyen exclusivament als emissors.
+
+Reproducció permesa amb finalitats no comercials.
+El codi de l'arxiu és obert.
+
+*****************************************************************
+
+Editor: Adrián Salcedo Toca
+
+*****************************************************************
