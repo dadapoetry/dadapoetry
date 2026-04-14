@@ -6,7 +6,7 @@ Document de protocol per a l'entrada de dades
 *****************************************************************
 
 01. PARÀMETRES DEL FITXER
-S'accepten fitxers de text pla (.txt), així com imatges en format .jpg, .png o .gif.
+S'accepten fitxers de text pla (.txt), així com imatges en format .jpg, .png o .gif. També àudios .mp3.
 
 _________________________________________________________________
 
