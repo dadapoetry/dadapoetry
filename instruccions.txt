@@ -6,8 +6,7 @@ Document de protocol per a l'entrada de dades
 *****************************************************************
 
 01. PARÀMETRES DEL FITXER
-S'accepten fitxers de text pla, així com imatges en format .jpg, .png o .gif.
-La mida dels fitxers, tant de text com visual, no pot superar 1MB. Força la compressió del teu dada.
+S'accepten fitxers de text pla (.txt), així com imatges en format .jpg, .png o .gif.
 
 _________________________________________________________________
 
@@ -16,7 +15,7 @@ Dada Poetry no emmagatzema biografies ni currículums.
 Adjunta la següent informació al cos del teu correu electrònic:
   a. Nom/Nickname
   b. Bateria actual del dispositiu amb què has realitzat el dada.
-  c. Software amb què l'has elaborat.
+  c. Programa/app amb què l'has elaborat.
   d. L'estat mental en què et trobes/trobaves.
   e. Les variables de l'entorn.
   f. Les paraules que has anat esborrant/canviant. Del dada no es descarta res.
