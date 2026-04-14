@@ -4,7 +4,7 @@ Aquest és un projecte artístic que barreja el dadà com a corrent estètica am
 
 És una iniciativa inspirada en Glossolalia, un entorn digital assagístico-poètic creat als anys 90 per autors del mail art. 
 
-Aquest és el manifest de Dada Poetry:
+****************************************************************
 
 Declaració d'independència d'una màquina cansada de la literatura humana
 
