@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'orrhort - Anton Tocacampanes - DADA POETRY</title>
+  <meta name="description" content="Poema auditiu: 'He vist tomàquets podrits més enllà de tota podridura...'">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000000'/><text x='4' y='24' font-family='Courier, monospace' font-size='26' font-weight='bold' fill='%23ffffff'>d_</text></svg>">
+    <style>
+    @media print {
+        body { font-size: 12pt; color: #000; background: #fff; }
+        footer .footer-grid, form, button { display: none; }
+        a { text-decoration: none; color: #000; }
+        a::after { content: " (" attr(href) ")"; font-size: 0.8em; font-family: monospace; }
+        h1::after { content: " - DOCUMENT IMPRÈS DE L'ARXIU"; font-size: 10pt; display: block; margin-top: 10px; }
+    }
+    body {
+        background-color: #ffffff;
+        color: #000000;
+        /* max-width: 700px; */
+        margin: 40px auto;
+        padding: 20px;
+        line-height: 1.4;
+    }
+
+    hr { border: 0; border-top: 1px solid #000; margin: 20px 0; }
+    a { color: #000; font-weight: bold; }
+    input[type="email"] { border: 1px solid #000; padding: 5px; font-family: monospace; width: 100%; max-width: 250px; margin-bottom: 10px; }
+    button { background: #000; color: #fff; border: none; padding: 5px 15px; cursor: pointer; font-family: monospace; }
+
+    footer {
+        margin-top: 30px;
+        font-size: 0.9rem;
+        border-top: 1px solid #000;
+        padding-top: 20px;
+        text-align: left; 
+        color: #1a1a1a;
+        line-height: 1.8;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px;
+    }
+
+    @media (max-width: 480px) {
+        .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    .footer-section {
+        margin-bottom: 10px;
+    }
+
+    .footer-label {
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.85rem;
+        letter-spacing: 0.05em;
+        margin-bottom: 5px;
+    }
+     #data-metric {
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: #666;
+     }
+    </style>
+
+<body>
+   <a href="numero-001.html">← RETORN A LA TAULA DE DADES</a>
+
+    <header>
+        <h4>Anton Tocacampanes</h4>
+        <h2>L'orrhort
+        </h2>
+
+<hr>
+        
+        <div>
+<div>Dada Poetry</div>
+            <span>Arxiu de dades poètiques i experiments visuals</span>
+<div>Primer objecte de dades [Juny 2026]</div>
+            <div>ISSN: 3137-6738</div>
+        
+</div>
+    </header>
+
+<hr>
+
+    <main>
+<audio controls style="filter: grayscale(1) contrast(2); height: 30px;">
+  <source src="Veu 016.mp3" type="audio/mpeg">
+  El teu navegador no suporta la reproducció d'àudio.
+</audio>
+
+        <h3>Metadades</h3>
+
+        <div>
+            <p id="Anton"><b>Anton Tocacampanes</b></p>
+            <pre>
+ ├─ nom_arxiu_enviat = "Veu 016.m4p"
+ ├─ bateria_dispositiu = 99%
+ ├─ programa = "gravadora de veu"
+ ├─ estat_mental = "cansat"
+ ├─ variables_entorn:
+ │   ├─ input_01 = "pronòstic de pluja"
+ │   └─ input_02 = "però ha fet molta calor"
+ └─ paraules_esborrades:
+     ├─ dump_01 = "espigalls"
+     ├─ dump_02 = "cols"
+     ├─ dump_03 = "cols de Brussel·les"
+     └─ dump_04 = "ceballots"
+</pre>
+
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <span class="footer-label">Publicació</span>
+                Dada Poetry. Arxiu de dades poètiques i experiments visuals.<br>
+                La freqüència de publicació és bimestral. <br>
+                ISSN: 3137-6738.<br>
+                Mataró, Catalunya.
+            </div>
+            <div class="footer-section">
+                <span class="footer-label">Subscripció</span>
+                Rep els nous registres via correu.<br>
+                <form action="https://buttondown.com/api/emails/embed-subscribe/dadapoetry" method="post">
+        <input type="email" name="email" placeholder="correu@exemple.com" required>
+        <button type="submit">Enviar</button>
+    </form>
+            </div>
+            <div class="footer-section">
+                <span class="footer-label">Contacte i Obres</span>
+                Segueix les <a href="instruccions.txt" target="_blank">instruccions</a> d'enviament.<br> 
+             Envia els teus dades a <a href="mailto:dades@dadapoetry.cat" target="_blank">dades@dadapoetry.cat</a>.
+            </div>
+            <div class="footer-section">
+                <span class="footer-label">Drets</span>
+                Els drets de les obres pertanyen als autors.<br>
+                Reproducció permesa amb finalitats no comercials.<br>
+                Codi obert a <a href="https://github.com/dadapoetry/" target="_blank">GitHub</a>.
+            </div>
+        </div>
+    </footer>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+
+    const firebaseConfig = {
+        databaseURL: "https://dadapoetry-e3301-default-rtdb.europe-west1.firebasedatabase.app/"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    
+
+    const pieceID = "orrhort"; 
+    const docRef = ref(db, `metriques/${pieceID}`);
+
+    document.addEventListener("DOMContentLoaded", function() {
+    
+        update(docRef, { visites: increment(1) }).catch(e => console.log(e));
+
+
+ 
+        const reproductorAudio = document.querySelector('audio');
+
+        if (reproductorAudio) {
+
+            reproductorAudio.addEventListener('ended', () => {
+                
+           
+                update(docRef, { lectures: increment(1) }).catch(e => console.log(e));
+                
+  
+                
+            }, { once: true });
+        } else {
+            console.warn("No se ha encontrado ninguna etiqueta <audio> en esta página.");
+        }
+    });
+</script>
+</body>
+</html>
