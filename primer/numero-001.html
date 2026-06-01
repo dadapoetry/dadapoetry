@@ -332,6 +332,26 @@ img {
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
 
+	    const pieceID = "numero_001"; 
+        const docRef = ref(db, `metriques/${pieceID}`);
+
+        document.addEventListener("DOMContentLoaded", function() {
+     
+            update(docRef, { visites: increment(1) }).catch(e => console.log(e));
+
+      
+            const finalDocument = document.querySelector('footer') || document.body;
+            if (finalDocument) {
+                const observador = new IntersectionObserver((entrades) => {
+                    if (entrades[0].isIntersecting) {
+                        update(docRef, { lectures: increment(1) });
+                        observador.disconnect(); 
+                    }
+                });
+                observador.observe(finalDocument);
+            }
+        });
+
         document.addEventListener("DOMContentLoaded", async function() {
             const links = document.querySelectorAll('.piece-link');
             
@@ -385,5 +405,6 @@ img {
             }
         });
     </script>
+	
 </body>
 </html>
