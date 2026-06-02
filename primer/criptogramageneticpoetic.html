@@ -7,6 +7,42 @@
   <meta name="description" content="Malic pansit,  enbadalit, com es cull, sense sospirar i escampar-ho, saó de pluja trèmula,  l’últim record  esberlat que et queda a la pell?">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000000'/><text x='4' y='24' font-family='Courier, monospace' font-size='26' font-weight='bold' fill='%23ffffff'>d_</text></svg>">
     <style>
+
+.aviso-girar {
+    display: none;
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .aviso-girar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: #000; 
+        color: #fff;    
+        padding: 12px;
+        font-family: monospace;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999; 
+        box-sizing: border-box;
+    }
+    
+  
+    .aviso-girar svg {
+        animation: rotar-icono 2.5s ease-in-out infinite;
+    }
+}
+
+@keyframes rotar-icono {
+    0%, 100% { transform: rotate(0deg); }
+    40%, 60% { transform: rotate(-90deg); } 
+}
     @media print {
         body { font-size: 12pt; color: #000; background: #fff; }
         footer .footer-grid, form, button { display: none; }
