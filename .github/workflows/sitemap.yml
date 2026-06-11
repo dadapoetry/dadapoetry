@@ -1,0 +1,27 @@
+name: Generar Sitemap Automático
+
+on:
+  push:
+    branches:
+      - main # O la rama donde tengas tu web
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Generate a sitemap
+    steps:
+    - name: Checkout el código
+      uses: actions/checkout@v4
+
+    - name: Crear el archivo Sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://dadapoetry.cat/
+
+    - name: Hacer commit y push del sitemap generado
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add sitemap.xml
+        git commit -m "Automated sitemap update" || exit 0
+        git push
