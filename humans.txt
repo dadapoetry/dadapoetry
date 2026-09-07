@@ -1,0 +1,12 @@
+/* TEAM */
+    Editor: Adrián Salcedo Toca
+    Dades escrites per: Idoia Prim, Pepita de Cal Puça, Laura Subirats, Borja Pujol-Forés, Marc Margarit, Òscar Palazón, Joan Paredes, Anton Tocacampanes
+    Contacte: dades@dadapoetry.cat
+
+/* SITE */
+    Última actualització: Setembre 2026
+    Web: https://dadapoetry.cat/
+    Projecte: Dada Poetry — Arxiu de dades poètiques i experiments visuals
+
+/* THANKS */
+    La màquina està cansada de la literatura humana.

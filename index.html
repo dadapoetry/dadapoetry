@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DADA POETRY</title>
     <meta name="description" content="Arxiu de dades poètiques i experiments visuals.">
+    <link rel="author" href="/humans.txt">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000000'/><text x='4' y='24' font-family='Courier, monospace' font-size='26' font-weight='bold' fill='%23ffffff'>d_</text></svg>">
     <style>
     @media print {
@@ -71,16 +72,25 @@
 <body>
     <h1>DADA POETRY</h1>
     <p>Dada és dadà. Dadà és dada. Arxiu de dades poètiques i experiments visuals.</p>
+    <p><a href="sobre.html">Sobre l'arxiu&nbsp;→</a></p>
     
     <hr>
 
     <h3>DIRECTORI</h3>
     <ul style="list-style-type:none;">
         <li>
+            <span style="font-family: monospace;">[003]</span> 
+            <a href="segon/numero-002.html" class="issue-link">Segon objecte de dades poètic</a> 
+            <span class="issue-weight" style="font-family: monospace; font-size: 0.85rem; color: #666;">Calculant el pes...</span> 
+            <span style="font-family: monospace;"> — 2026-09-01 [<a href="segon/numero-002.txt" target="_blank">Descarrega'l en format .txt</a>]</span> 
+            <span class="issue-density" style="font-family: monospace; font-size: 0.85rem; color: #666;">Calculant la densitat...</span> 
+        </li>
+        <li>
             <span style="font-family: monospace;">[002]</span> 
             <a href="primer/numero-001.html" class="issue-link">Primer objecte de dades poètic</a> 
             <span class="issue-weight" style="font-family: monospace; font-size: 0.85rem; color: #666;">Calculant el pes...</span> 
-           <span style="font-family: monospace;"> — 2026-06-03 [<a href="primer/numero-001.txt" target="_blank">Descarrega'l en format .txt</a>]</span> 
+            <span style="font-family: monospace;"> — 2026-06-03 [<a href="primer/numero-001.txt" target="_blank">Descarrega'l en format .txt</a>]</span> 
+            <span class="issue-density" style="font-family: monospace; font-size: 0.85rem; color: #666;">Calculant la densitat...</span> 
         </li>
         <li>
             <span style="font-family: monospace;">[001]</span> 
@@ -119,13 +129,30 @@
             </div>
         </div>
     </footer>
-  <script>
+  <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+        const firebaseConfig = {
+            databaseURL: "https://dadapoetry-e3301-default-rtdb.europe-west1.firebasedatabase.app/"
+        };
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        function concepteDensitat(p) {
+            if (p >= 80) return "ALTA DENSITAT DIGITAL";
+            if (p >= 50) return "DENSITAT DIGITAL MITJA";
+            if (p >= 20) return "BAIXA DENSITAT DIGITAL";
+            return "DENSITAT NUL·LA";
+        }
+
     document.addEventListener("DOMContentLoaded", async function() {
 
         const issueLinks = document.querySelectorAll('.issue-link');
         
         for (let link of issueLinks) {
             const weightSpan = link.parentNode.querySelector('.issue-weight');
+            const densitySpan = link.parentNode.querySelector('.issue-density');
             
             try {
            
@@ -176,6 +203,31 @@
                 const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').substring(0, 8);
                 
                 weightSpan.innerText = `[${kbSize} KB DE MATÈRIA DIGITAL]`;
+                
+                const pieceIDs = Array.from(pieceLinks)
+                    .map(pl => pl.getAttribute('data-piece-id'))
+                    .filter(id => id);
+                if (densitySpan && pieceIDs.length > 0) {
+                    const abandonaments = [];
+                    for (const pid of pieceIDs) {
+                        try {
+                            const dades = (await get(ref(db, `metriques/${pid}`))).val() || { visites: 0, lectures: 0 };
+                            const visites = dades.visites || 0;
+                            const lectures = dades.lectures || 0;
+                            if (visites > 0) {
+                                abandonaments.push(Math.round(((visites - lectures) / visites) * 100));
+                            }
+                        } catch (e) {}
+                    }
+                    if (abandonaments.length > 0) {
+                        const mitjana = Math.round(abandonaments.reduce((a, b) => a + b, 0) / abandonaments.length);
+                        densitySpan.innerText = `[DENSITAT MITJANA: ${mitjana}% ${concepteDensitat(mitjana)}]`;
+                    } else {
+                        densitySpan.innerText = `[SENSE DADES]`;
+                    }
+                } else if (densitySpan) {
+                    densitySpan.innerText = `[NO APLICA]`;
+                }
                 
             } catch (error) {
                 weightSpan.innerText = `[ERROR DE DADES]`;
