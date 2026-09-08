@@ -95,6 +95,21 @@
       font-style: italic;
       color: #333;
     }
+
+    .rozanova {
+      display: block;
+      width: 50%;
+      max-width: 400px;
+      height: auto;
+      margin: 0 auto 40px auto;
+    }
+
+    @media (max-width: 480px) {
+      .rozanova {
+        width: 80%;
+        max-width: none;
+      }
+    }
     </style>
 
 <body>
@@ -121,7 +136,7 @@
     <main>
         <p class="traduccio">Publicat el març de 1913 a la revista homònima. Text traduït al català per Adrián Salcedo Toca.</p>
 
-        <img src="Rozanova_(cropped).jpg" alt="Olga Rozanova" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto 40px auto;">
+        <img src="Rozanova_(cropped).jpg" class="rozanova" alt="Olga Rozanova">
 
         <div class="manifest-text">
 <p>Mitjançant l&rsquo;organització d&rsquo;exposicions, lectures i conferències sobre art, nosaltres, la Societat d&rsquo;Artistes «Unió de la Joventut», volíem donar al públic interessat la possibilitat de conèixer l&rsquo;estat de la Jove Pintura Contemporània i revelar-li el nostre Credo tècnic.</p>

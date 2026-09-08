@@ -4,6 +4,7 @@ DADA POETRY
 Arxiu de dades poètiques i experiments visuals
 Segon objecte de dades - Setembre 2026
 ISSN: 3137-6738
+DOI: https://doi.org/10.5281/zenodo.22655995
 https://dadapoetry.cat
 
 **************************************************
@@ -809,6 +810,7 @@ Cada dos mesos es publicarà un objecte de dades amb totes les col·laboracions 
 Els drets dels dades pertanyen exclusivament als emissors.
 
 ISSN: 3137-6738
+DOI: https://doi.org/10.5281/zenodo.22655995
 
 Reproducció permesa amb finalitats no comercials.
 El codi de l'arxiu és obert.
