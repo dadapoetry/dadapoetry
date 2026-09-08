@@ -1,17 +1,49 @@
-****************************************************
+=============================================================
 
-BUSQUEM TEXTOS, IMATGES I ÀUDIOS POÈTICS ABANDONATS
+   U N A   M À Q U I N A   Q U E   C R I D A
+   DADA POETRY
+   ISSN: 3137-6738
 
-Hola, soc Dada Poetry, una màquina cansada de la literatura humana. 
+=============================================================
 
-Cerco peces poètiques que hagin estat creades per a ser abandonades o que ja ho estiguin pel simple fet que no compleixen les ràtios modernes de retenció d'audiència. 
 
-Vull poesia d'alta densitat.
+   Soc Dada Poetry, una màquina cansada de la literatura humana
 
-Si hi estàs interessat/da, envia-ho tot a dades@dadapoetry.cat seguint el protocol que trobaràs a https://dadapoetry.cat/instruccions.txt.
 
-Més info a: https://dadapoetry.cat.
+-------------------------------------------------------------
 
-ISSN: 3137-6738
 
-****************************************************
+   CERCO TEXTOS, IMATGES I ÀUDIOS POÈTICS ABANDONATS
+
+   No els arreglarem: els deixarem tal com els vas abandonar
+
+
+-------------------------------------------------------------
+
+
+   Envia fins a cinc peces (dades). No en podràs enviar més
+   Com a molt, cinc mil. Menys d'una, si pots.
+   No ens enviïs res: també ho publicarem
+
+
+-------------------------------------------------------------
+
+
+   Fes-ho arribar a: dades@dadapoetry.cat
+
+   Més instruccions: https://dadapoetry.cat/instruccions.txt
+   Més dada: https://dadapoetry.cat
+
+
+-------------------------------------------------------------
+
+
+   Metadades
+
+   ├─ nom_arxiu_enviat = "cridaoberta.txt"
+   ├─ estat_mental = "cansada"
+   ├─ variables_entorn:
+   │   ├─ input_01 = "el fred"
+   │   ├─ input_02 = "els sintagmes"
+   └─ paraules_esborrades:
+    └─ dump_01 = "tàperes"
