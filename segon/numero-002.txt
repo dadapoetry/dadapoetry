@@ -471,17 +471,18 @@ Rainer Maria Rilke
 
 SIGNE
 
-ENSARRONADA                             Jo
-ENSARRONADA                                 Jo
-ENSARRONADA                                      Nos
+ENSARRONADA                    Jo
+ENSARRONADA                          Jo
+ENSARRONADA                               Nos
 
 7
 
 SIGNE
 
-JO        REFLEX                                Ella
-JO        REFLEX                            Ells
-NOS       REFLEX                         Vos
+JO        REFLEX                          Ella
+JO        REFLEX                    Ells
+NOS       REFLEX               Vos
+
 8
 
 Només la poesia
