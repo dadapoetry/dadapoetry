@@ -78,6 +78,12 @@ img {
      }
 
 		
+    .doi-badge-pic img { display: inline; }
+    .doi-badge-link { display: none; }
+    @media (max-width: 480px) {
+        .doi-badge-pic img { display: none; }
+        .doi-badge-link { display: inline; font-size: 0.9em; }
+    }
     </style>
 
 <body>
@@ -92,7 +98,13 @@ img {
         <div>
             <span>Arxiu de dades poètiques i experiments visuals</span>
             <div>ISSN: 3137-6738</div>
-            <div><a href="https://doi.org/10.5281/zenodo.22655828"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22655828.svg" alt="DOI" style="height: 1.1em; vertical-align: text-bottom;"></a></div>
+            <div><a href="https://doi.org/10.5281/zenodo.22655828">
+                    <picture class="doi-badge-pic">
+                        <source media="(max-width: 480px)" srcset="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E">
+                        <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22655828.svg" alt="DOI" style="height: 1.1em; vertical-align: text-bottom;">
+                    </picture>
+                    <span class="doi-badge-link">DOI: https://doi.org/10.5281/zenodo.22655828</span>
+                </a></div>
             <div>Editor: Adrián Salcedo Toca</div>
         </div>
 <div><center><img src="unicazurn1.jpg" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"></img></center></br>
@@ -307,7 +319,13 @@ img {
                 Dada Poetry. Arxiu de dades poètiques i experiments visuals.<br>
                 La freqüència de publicació és bimestral. <br>
                 ISSN: 3137-6738.<br>
-                <a href="https://doi.org/10.5281/zenodo.22655828"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22655828.svg" alt="DOI" style="height: 1.1em; vertical-align: text-bottom;"></a><br>
+                <a href="https://doi.org/10.5281/zenodo.22655828">
+                    <picture class="doi-badge-pic">
+                        <source media="(max-width: 480px)" srcset="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E">
+                        <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22655828.svg" alt="DOI" style="height: 1.1em; vertical-align: text-bottom;">
+                    </picture>
+                    <span class="doi-badge-link">DOI: https://doi.org/10.5281/zenodo.22655828</span>
+                </a><br>
                 Mataró, Catalunya.
             </div>
             <div class="footer-section">
