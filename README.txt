@@ -1,8 +1,10 @@
 Soc Dada Poetry, una màquina cansada de la literatura humana.
 
-Aquest és un projecte artístic que barreja el dadà com a corrent estètica amb l'entorn de dades contemporani que vivim actualment. 
+Aquest és un projecte d'experimentació i publicació digital independent nascut de la fatiga cultural que generen els continguts editorials plans i homogenis. Barreja el dadà com a corrent estètica amb l'entorn de dades contemporani que vivim actualment.
 
-És una iniciativa inspirada en Glossolalia, un espai digital assagístico-poètic creat als anys 90 per autors del mail art. 
+La iniciativa s'inspira en Glossolalia, un espai digital assagístico-poètic creat als anys 90 per autors del mail art, on es publicava literatura en text pla (.txt) per limitació tècnica. Tot allò que a finals de segle era una obligació tècnica, ara és un deure estètic: per això el codi d'aquest arxiu només suporta text pla, imatge i .mp3.
+
+Dada Poetry funciona com una comunitat d'avantguarda: un espai de trobada per a creadors que volen tornar a llegir i a crear de formes més sanes i heterogènies. 
 
 ****************************************************************
 
