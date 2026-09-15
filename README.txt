@@ -63,7 +63,7 @@ Números publicats fins ara:
   [2] Segon objecte de dades poètic — Setembre 2026 — https://dadapoetry.cat/segon/numero-002.html
 
 Sabotatge actiu:
-  [004] Primer sabotatge de dades poètic — Setembre 2026 — https://dadapoetry.cat/sabotatges/sabotatge-001.html
+  [1] Primer sabotatge de dades poètic — Setembre 2026 — https://dadapoetry.cat/sabotatges/sabotatge-001.html
 
 Els drets dels dades pertanyen exclusivament als emissors.
 
