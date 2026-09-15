@@ -4,7 +4,7 @@ DADA POETRY
 Arxiu de dades poètiques i experiments visuals
 PRIMER SABOTATGE DE DADES POÈTIC
 ISSN: 3137-6738
-DOI: [DOI: pendent de registre]
+DOI: https://doi.org/10.5281/zenodo.22775657
 https://dadapoetry.cat/sabotatges/sabotatge-001.html
 
 **************************************************
