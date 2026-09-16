@@ -806,7 +806,7 @@ Envia fins a 5 dades a dades@dadapoetry.cat.
 _________________________________________________
 
 La publicació de Dada Poetry és bimestral. 
-Cada dos mesos es publicarà un objecte de dades amb totes les col·laboracions enviades fins aleshores.
+Cada dos mesos es publicarà un objecte de dades amb les col·laboracions seleccionades de les enviades fins aleshores.
 Els drets dels dades pertanyen exclusivament als emissors.
 
 ISSN: 3137-6738

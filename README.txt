@@ -56,7 +56,7 @@ Envia fins a 5 dades a dades@dadapoetry.cat.
 
 ________________________________________________________________
 
-La publicació de Dada Poetry és bimestral. Cada dos mesos es publicarà un objecte de dades amb totes les col·laboracions enviades fins aleshores.
+La publicació de Dada Poetry és bimestral. Cada dos mesos es publicarà un objecte de dades amb les col·laboracions seleccionades de les enviades fins aleshores.
 
 Números publicats fins ara:
   [1] Primer objecte de dades poètic — Juny 2026 — https://dadapoetry.cat/primer/numero-001.html
