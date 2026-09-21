@@ -1,19 +1,21 @@
 **************************************************
 
 DADA POETRY
-Document de protocol per a l'entrada de dades
+Document de protocol per a l'entrada de dades · Data entry protocol document
 https://dadapoetry.cat
 
 **************************************************
 
-01. PARÀMETRES DEL FITXER
+01. PARÀMETRES DEL FITXER · FILE PARAMETERS
 S'accepten fitxers de text pla (.txt), així com imatges en format .jpg, .png o .gif. També àudios .mp3.
+Plain text files (.txt) are accepted, as well as images in .jpg, .png or .gif format. Also .mp3 audio.
 
 __________________________________________________
 
-02. DEPENDÈNCIES
-Dada Poetry no emmagatzema biografies ni currículums. 
-Adjunta la següent informació al cos del teu correu electrònic:
+02. DEPENDÈNCIES · DEPENDENCIES
+Dada Poetry no emmagatzema biografies ni currículums. Adjunta la següent informació al cos del teu correu electrònic:
+Dada Poetry does not store biographies or CVs. Attach the following information to the body of your email:
+
   a. Nom/Nickname
   b. Bateria actual del dispositiu amb què has realitzat el dada.
   c. Programa/app amb què l'has elaborat.
@@ -21,33 +23,56 @@ Adjunta la següent informació al cos del teu correu electrònic:
   e. Les variables de l'entorn.
   f. Les paraules que has anat esborrant/canviant. Del dada no es descarta res.
 
+  a. Name/Nickname
+  b. Current battery level of the device you used to make the dada.
+  c. Program/app you used to create it.
+  d. The mental state you are/were in.
+  e. The environmental variables.
+  f. The words you kept deleting/changing. Nothing is discarded from the dada.
+
 __________________________________________________
 
-03. TELEMETRIA
+03. TELEMETRIA · TELEMETRY
 Tots els textos publicats són monitoritzats en temps real.
-Es busquen dades d'alta fricció, que disparin la taxa d'abandonament (el percentatge d'usuaris que no arriben al final del document). 
+Es busquen dades d'alta fricció, que disparin la taxa d'abandonament (el percentatge d'usuaris que no arriben al final del document).
 El sistema farà pública la Taxa d'Abandonament del teu dada.
 Una taxa alta d'abandonament classificarà el text com a "Alta densitat digital". Una taxa baixa el classificarà com a "nul·la densitat".
 
+All published texts are monitored in real time.
+High-friction data is sought — data that spikes the abandonment rate (the percentage of users who do not reach the end of the document).
+The system will make the Abandonment Rate of your dada public.
+A high abandonment rate will classify the text as "high digital density". A low rate will classify it as "null density".
+
 __________________________________________________
 
-04. EXECUCIÓ
+04. EXECUCIÓ · EXECUTION
 Envia els teus dades a: dades@dadapoetry.cat.
 Sintaxi obligatòria per a l'assumpte del correu: [DADA] Format_del_text - Títol_del_text
 Exemple: [DADA] txt - esborrall i compte nou.
 Pots enviar fins a 5 peces per cada objecte de dades publicat a Dada Poetry.
 
+Send your dadas to: dades@dadapoetry.cat.
+Mandatory syntax for the email subject: [DADA] Text_format - Text_title
+Example: [DADA] txt - esborrall i compte nou.
+You can send up to 5 pieces per data object published on Dada Poetry.
+
 ___________________________________________________
 
-05. PUBLICACIÓ I DRETS
-La publicació de Dada Poetry és bimestral. 
+05. PUBLICACIÓ I DRETS · PUBLICATION AND RIGHTS
+La publicació de Dada Poetry és bimestral.
 Cada dos mesos es publicarà un objecte de dades amb les col·laboracions seleccionades de les enviades fins aleshores.
 Els drets dels dades pertanyen exclusivament als emissors.
+
+Dada Poetry is published bimonthly.
+Every two months, a data object will be published with the collaborations selected from those submitted up to that point.
+The rights to the dadas belong exclusively to their senders.
 
 ISSN: 3137-6738
 
 Reproducció permesa amb finalitats no comercials.
 El codi de l'arxiu és obert.
+Reproduction permitted for non-commercial purposes.
+The file's code is open.
 
 **************************************************
 
