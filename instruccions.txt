@@ -48,7 +48,7 @@ __________________________________________________
 04. EXECUCIÓ · EXECUTION
 Envia els teus dades a: dades@dadapoetry.cat.
 Sintaxi obligatòria per a l'assumpte del correu: [DADA] Format_del_text - Títol_del_text
-Exemple: [DADA] txt - esborrall i compte nou.
+Exemple: [DADA] txt - borralló i compte nou.
 Pots enviar fins a 5 peces per cada objecte de dades publicat a Dada Poetry.
 
 Send your dadas to: dades@dadapoetry.cat.
