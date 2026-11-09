@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIRTUAL AUSIÀS - Adrián Salcedo Toca - DADA POETRY</title>
+    <link rel="canonical" href="https://dadapoetry.cat/tercer/virtual-ausias.html">
+    <meta name="description" content="VIRTUAL AUSIÀS, d'Adrián Salcedo Toca: una pàgina de teletext dedicada a Ausiàs March. Tercer objecte de dades poètic de Dada Poetry.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Dada Poetry">
+    <meta property="og:title" content="VIRTUAL AUSIÀS — Adrián Salcedo Toca">
+    <meta property="og:description" content="Una pàgina de teletext dedicada a Ausiàs March, dins el Tercer objecte de dades poètic de Dada Poetry.">
+    <meta property="og:url" content="https://dadapoetry.cat/tercer/virtual-ausias.html">
+    <meta property="og:image" content="https://dadapoetry.cat/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VIRTUAL AUSIÀS — Adrián Salcedo Toca">
+    <meta name="twitter:description" content="Una pàgina de teletext dedicada a Ausiàs March, dins el Tercer objecte de dades poètic de Dada Poetry.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000000'/><text x='4' y='24' font-family='Courier, monospace' font-size='26' font-weight='bold' fill='%23ffffff'>d_</text></svg>">
+
+    <style>
+    :root {
+        --tt-w: #ffffff;
+        --tt-c: #00ffff;
+        --tt-y: #ffff00;
+        --tt-g: #00ff00;
+        --tt-m: #ff00ff;
+        --tt-r: #ff0000;
+        --tt-b: #0000ff;
+    }
+
+    @media print {
+        @page { margin: 12mm; }
+        html, body { background: #ffffff !important; color: #000000 !important; }
+        body { max-width: none !important; margin: 0 !important; padding: 0 !important; }
+        a { text-decoration: none; color: #000000 !important; }
+        a::after { content: " (" attr(href) ")"; font-size: 0.8em; font-family: monospace; color: #444; }
+        .tt-line span { color: #000000 !important; }
+        .tt-item::after, .tt-inline::after { content: "" !important; }
+        .tt-big { transform: none !important; margin-bottom: 0 !important; }
+        .tt-row { animation: none !important; }
+        .tt-art span { color: #000000 !important; }
+        .tt-script { color: #000000 !important; }
+        .tt-code { border-left-color: #000000 !important; }
+        .tt-code span { color: #000000 !important; }
+        .tt-hole span { color: #000000 !important; visibility: visible !important; animation: none !important; }
+        .tt-essay { color: #000000 !important; border-left-color: #000000 !important; }
+        .tt-meta .tk, .tt-meta .tv { color: #000000 !important; }
+        .tt-type .ch { visibility: visible !important; }
+        .tt-type .ch::after { display: none !important; }
+        .tt-type { visibility: visible !important; border-left-color: #000000 !important; height: auto !important; background: none !important; }
+        .tt-sum { display: none !important; }
+        .tt-sum-still { display: block !important; color: #000000 !important; }
+        .tt-sum-still span { color: #000000 !important; }
+        form, button, .tt-form-line { display: none !important; }
+        .tt-view { display: none !important; }
+        .tt-view:first-child, .tt-view:target { display: block !important; }
+        .tt-nav:has(.tt-view:target) .tt-view:first-child:not(:target) { display: none !important; }
+        .tt-screen { break-inside: avoid; }
+        * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    html { background: #000000; }
+    body {
+        background-color: #000000;
+        color: #ffffff;
+        margin: 0 auto;
+        padding: 26px 18px 40px;
+        line-height: 1.4;
+    }
+    a { color: var(--tt-c); }
+    a:visited { color: var(--tt-c); }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .tt-page {
+        container-type: inline-size;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* Cada bloc és una pantalla de 40 columnes. */
+    .tt-screen {
+        width: 40ch;
+        margin: 0 auto;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 700;
+        font-size: clamp(6px, 4.1cqw, 17px);
+        line-height: 1;
+        letter-spacing: 0;
+    }
+
+    .tt-screen + .tt-screen { margin-top: 2.6em; }
+
+    .tt-line {
+        display: block;
+        margin: 0;
+        white-space: pre;
+    }
+
+    /* Retrat de la portada: les files salten un o dos caràcters en moments
+       diferents, com una imatge de teletext que no acaba d'encaixar. */
+    .tt-art {
+        display: block;
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        font-weight: 400;
+        line-height: 1;
+        white-space: pre;
+        overflow: hidden;
+    }
+
+    /* P104 · slop. Lo guió s'imprimeix tal com raja: quaranta columnes
+       exactes, amb la barra dins la sortida i sense vores afegides. */
+    .tt-script {
+        display: block;
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        line-height: 1;
+        white-space: pre;
+        overflow: hidden;
+        tab-size: 1;
+    }
+
+    /* P104 · lo codi font, en la paleta de codi: comentaris verds,
+       cadenes grogues, paraules clau cian, nombres magenta, expressions
+       regulars roges. La barra del bloc pren el cian del codi. */
+    .tt-essay.tt-code {
+        border-left-color: var(--tt-c);
+    }
+    .tt-code .cc { color: var(--tt-g); }
+    .tt-code .cs { color: var(--tt-y); }
+    .tt-code .ck { color: var(--tt-c); }
+    .tt-code .cn { color: var(--tt-m); }
+    .tt-code .cr { color: var(--tt-r); }
+
+    .tt-row {
+        display: block;
+        animation: tt-pixel 6.4s steps(1, end) infinite;
+        animation-delay: calc(var(--i) * -0.43s);
+        will-change: transform;
+    }
+
+    @keyframes tt-pixel {
+        0%, 38% { transform: translateX(0); }
+        39% { transform: translateX(calc(var(--a) * 1ch)); }
+        40%, 41% { transform: translateX(calc(var(--a) * -1ch)); }
+        42%, 82% { transform: translateX(0); }
+        83% { transform: translateX(calc(var(--a) * 1ch)); }
+        84% { transform: translateX(calc(var(--a) * -1ch)); }
+        85%, 100% { transform: translateX(0); }
+    }
+
+    /* P102 · el forat. L'anell no es tanca; la llum que el recorre
+       esborra les dues paraules de la vora i les deixa tornar. */
+    .tt-hole {
+        display: block;
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        font-weight: 700;
+        line-height: 1;
+        white-space: pre;
+    }
+
+    .tt-hrow { display: block; }
+
+    .hw,
+    .hl {
+        color: var(--tt-w);
+        animation: tt-orbit 10.498s steps(1, end) infinite;
+        animation-delay: calc(var(--k) * 181ms);
+    }
+
+    .hl { animation-name: tt-eat; }
+
+    @keyframes tt-orbit {
+        0% { color: var(--tt-y); }
+        2% { color: var(--tt-w); }
+        100% { color: var(--tt-w); }
+    }
+
+    @keyframes tt-eat {
+        0% { color: var(--tt-y); visibility: visible; }
+        2% { color: var(--tt-w); visibility: visible; }
+        3% { visibility: hidden; }
+        22% { visibility: hidden; }
+        23% { visibility: visible; }
+        100% { visibility: visible; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .tt-row,
+        .hw,
+        .hl { animation: none; }
+    }
+
+    /* Doble alçada de teletext. */
+    .tt-big {
+        transform: scaleY(2);
+        transform-origin: top center;
+        margin-bottom: 1em;
+    }
+
+    /* Mini-assaig: text pla enganxat del bloc de notes. No cal comptar
+       caràcters ni posar salts manuals; s'ajusta sol a la graella de 40
+       columnes (38 de text + barra + espai). Els salts de paràgraf es
+       respecten. */
+    .tt-essay {
+        width: 40ch;
+        box-sizing: border-box;
+        margin: 0;
+        border-left: 1ch solid var(--tt-w);
+        padding-left: 1ch;
+        color: var(--tt-w);
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        tab-size: 1;
+    }
+
+    /* Metadades de la peça: claus en cian, valors en blanc, dins de la
+       mateixa graella de 40 columnes que la resta de pantalles. */
+    .tt-meta .tk { color: var(--tt-c); }
+    .tt-meta .tv { color: var(--tt-w); }
+
+    /* P103 · nothingburger. Lo text no apareix de cop: s'imprimeix com un
+       pensament en curs, caràcter a caràcter, amb un cursor de bloc a la
+       cel·la següent. La caixa creix amb el text (i amb ella la barra, la
+       navegació i el peu), així que res no queda penjat a baix. Amb
+       moviment reduït o en paper, no s'anima res i es veu sencer. */
+    /* La barra lateral no ve pintada de sèrie: es dibuixa a mesura que el
+       text avança, fila a fila, com la resta de la pantalla. El border
+       continua reservant l'amplada (38 columnes de text) però transparent;
+       el que es veu és el fons del bloc, que creix fins a la fila on hi ha
+       el cursor. */
+    .tt-type {
+        position: relative;
+    }
+
+    /* Lo script arma l'assaig abans del primer pintat: text amagat i barra
+       a zero, perquè no es vegi ni un sol fotograma del text sencer. Sense
+       JS (o amb moviment reduït) no s'arma i es veu com qualsevol altre
+       assaig. */
+    .tt-type.tt-armed {
+        visibility: hidden;
+        border-left-color: transparent;
+        height: var(--rail-h, 0);
+        overflow: hidden;
+        /* La barra és el fons del propi bloc: així no la talla el
+           overflow:hidden (que només retalla el text que encara no s'ha
+           escrit) i el text invisible no allarga la pàgina. */
+        background-image: linear-gradient(var(--tt-w), var(--tt-w));
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-origin: border-box;
+        background-clip: border-box;
+        background-size: var(--rail-w, 1ch) var(--rail-h, 0);
+    }
+
+    .tt-type.tt-armed.tt-live { visibility: visible; }
+
+    /* Quan el text ja és sencer, l'assaig recupera la seva alçada natural
+       (que és la mateixa que la de l'última fila). */
+    .tt-type.tt-armed.tt-end {
+        height: auto;
+    }
+
+    .tt-type .ch { visibility: hidden; }
+
+    .tt-type .ch.is-on { visibility: visible; }
+
+    .tt-type .ch.is-cur { position: relative; }
+
+    .tt-type .ch.is-cur::after {
+        content: "█";
+        position: absolute;
+        left: 0;
+        top: 0;
+        visibility: visible;
+        color: var(--tt-w);
+        animation: tt-blink 1s steps(1, end) infinite;
+    }
+
+    @keyframes tt-blink {
+        0%, 50% { opacity: 1; }
+        50.01%, 100% { opacity: 0; }
+    }
+
+    .tw { color: var(--tt-w); }
+    .tc { color: var(--tt-c); }
+    .ty { color: var(--tt-y); }
+    .tg { color: var(--tt-g); }
+    .tm { color: var(--tt-m); }
+    .tr { color: var(--tt-r); }
+    .tb { color: var(--tt-b); }
+    .t0 { color: #000000; }
+
+    /* P102 · cors. COR i COS comparteixen CO; la R i la S són el que
+       aporta cada mot. La pàgina es redibuixa en cel·les: el CO comú
+       es torna blanc, el CO de sota s'absorbeix i la S puja fins al mot
+       sencer. Sense moviment continu: cada pas és un refresc. */
+    .tt-sum {
+        width: 40ch;
+        height: 2em;
+        overflow: hidden;
+    }
+
+    .tt-strip {
+        animation: tt-sum 16.6s steps(1, end) infinite;
+        will-change: transform;
+    }
+
+    .tt-frame { display: block; }
+    .tt-void { height: 1em; }
+
+    @keyframes tt-sum {
+        0%      { transform: translateY(0); }
+        14.46%  { transform: translateY(-2em); }
+        30.12%  { transform: translateY(-4em); }
+        43.37%  { transform: translateY(-6em); }
+        54.22%  { transform: translateY(-8em); }
+        65.06%  { transform: translateY(-10em); }
+        75.9%   { transform: translateY(-12em); }
+        96.39%  { transform: translateY(-14em); }
+        100%    { transform: translateY(-14em); }
+    }
+
+    /* Sense moviment (i en paper): el diagrama quiet. */
+    .tt-sum-still {
+        display: none;
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        line-height: 1;
+        white-space: pre;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .tt-sum { display: none; }
+        .tt-sum-still { display: block; }
+        .tt-type .ch { visibility: visible !important; }
+        .tt-type .ch::after { display: none !important; }
+        .tt-type { visibility: visible !important; border-left-color: var(--tt-w) !important; height: auto !important; background: none !important; }
+    }
+
+
+    /* Navegació: cada fila és un enllaç de 40 columnes. */
+    .tt-nav { margin: 0; }
+    .tt-view { display: none; }
+    .tt-view:first-child,
+    .tt-view:target { display: block; }
+    .tt-nav:has(.tt-view:target) .tt-view:first-child:not(:target) { display: none; }
+
+    .tt-item {
+        color: inherit;
+        text-decoration: none;
+        font-weight: inherit;
+    }
+
+    /* L'índex de P101 porta caràcters d'amplada doble (CJK): la fila
+       es mesura en columnes de 40 i el reompliment s'ajusta sol, sense
+       comptar caràcters. */
+    .tt-item.tt-cjk {
+        display: flex;
+        width: 40ch;
+    }
+
+    .tt-item.tt-cjk > .tw { white-space: nowrap; }
+    .tt-item.tt-cjk > .fill { flex: 1 1 auto; }
+    .tt-item:hover,
+    .tt-item:focus-visible {
+        background: #ffffff;
+        outline: none;
+    }
+    .tt-item:hover span,
+    .tt-item:focus-visible span { color: #000000 !important; }
+
+    .tt-inline {
+        color: var(--tt-y);
+        text-decoration: none;
+    }
+    .tt-inline:hover,
+    .tt-inline:focus-visible {
+        background: var(--tt-y);
+        color: #000000;
+        outline: none;
+    }
+
+    /* Formulari com un camp de teletext. */
+    .tt-form-line {
+        display: flex;
+        align-items: center;
+        white-space: pre;
+        height: 1.6em;
+    }
+    .tt-form {
+        display: flex;
+        gap: 1ch;
+        margin: 0;
+    }
+    .tt-form input {
+        font: inherit;
+        font-size: 1em;
+        width: 26ch;
+        height: 1.5em;
+        line-height: 1.5;
+        padding: 0 0.4ch;
+        border: 0;
+        background: #ffffff;
+        color: #000000;
+    }
+    .tt-form input::placeholder { color: #666666; opacity: 1; }
+    .tt-form button {
+        font: inherit;
+        font-size: 1em;
+        width: 8ch;
+        height: 1.5em;
+        line-height: 1.5;
+        padding: 0;
+        border: 0;
+        background: var(--tt-y);
+        color: #000000;
+        cursor: pointer;
+    }
+    .tt-form button:hover,
+    .tt-form button:focus-visible {
+        background: #ffffff;
+        outline: none;
+    }
+
+    /* P101, P102 i P104 · «carn». La paraula ocupa sempre quatre cel·les:
+       les corrupcions europees i els caràcters japonesos no fan ballar la
+       graella de quaranta columnes. */
+    .tt-carn {
+        display: inline-block;
+        width: 4ch;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px; height: 1px;
+        padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0 0 0 0);
+        white-space: nowrap; border: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="tt-page">
+        <header class="tt-screen">
+<div class="tt-line tc" aria-hidden="true">▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄</div>
+<div class="tt-line"><a class="tt-item" href="numero-003.html#retropensats"><span class="tr" aria-hidden="true">█</span><span class="tw"> ← RETORN A LA TAULA DE DADES</span><span class="t0">          </span></a></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<h1 class="sr-only">VIRTUAL AUSIÀS, d'Adrián Salcedo Toca</h1>
+<div class="tt-line"><span class="tm" aria-hidden="true">█</span><span class="tw"> Adrián Salcedo Toca</span><span class="t0">                   </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line tt-big" aria-hidden="true"><span class="ty">             VIRTUAL AUSIÀS             </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line"><span class="tm" aria-hidden="true">█</span><span class="tm"> INSTAL·LACIÓ / DISPOSITIU / SIMULACRE</span><span class="t0"> </span></div>
+<div class="tt-line"><span class="tm" aria-hidden="true">█</span><span class="tm"> ARTEFACTE / INTERVENCIÓ / MÒDUL</span><span class="t0">       </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line"><span class="tc" aria-hidden="true">█</span><span class="tc"> Dada Poetry</span><span class="t0">                           </span></div>
+<div class="tt-line"><span class="tc" aria-hidden="true">█</span><span class="tw"> Arxiu de dades poètiques</span><span class="t0">              </span></div>
+<div class="tt-line"><span class="tc" aria-hidden="true">█</span><span class="tw"> i experiments visuals</span><span class="t0">                 </span></div>
+<div class="tt-line"><span class="tg" aria-hidden="true">█</span><span class="tw"> Tercer objecte de dades</span><span class="t0">               </span></div>
+<div class="tt-line"><span class="tc" aria-hidden="true">█</span><span class="tc"> [Novembre 2026]</span><span class="t0">                       </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> ISSN: 3137-6738</span><span class="t0">                       </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<pre class="tt-art" role="img" aria-label="Retrat d'Ausiàs March dibuixat amb blocs de teletext, amb les files en moviment."><span class="tt-row" style="--i:0;--a:1"><span class="t0">                   </span><span class="tc">▄▄</span><span class="t0">                   </span></span><span class="tt-row" style="--i:1;--a:2"><span class="t0">              </span><span class="tc">▄</span><span class="tw">████▄▄████</span><span class="tc">▄</span><span class="t0">              </span></span><span class="tt-row" style="--i:2;--a:1"><span class="t0">             </span><span class="tw">██</span><span class="t0"> </span><span class="tw">▀</span><span class="tc">▀▀▀▀▀▀▀</span><span class="tw">███</span><span class="tc">▄</span><span class="t0">            </span></span><span class="tt-row" style="--i:3;--a:2"><span class="t0">            </span><span class="tw">██</span><span class="tc">▀</span><span class="t0">          </span><span class="tw">███</span><span class="tc">▄</span><span class="t0">           </span></span><span class="tt-row" style="--i:4;--a:1"><span class="t0">           </span><span class="tw">████</span><span class="t0"> </span><span class="tc">▄▄</span><span class="t0"> </span><span class="tc">▄</span><span class="t0">  </span><span class="tc">▄</span><span class="t0">  </span><span class="tw">████</span><span class="t0">           </span></span><span class="tt-row" style="--i:5;--a:1"><span class="t0">           </span><span class="tw">███████</span><span class="t0">  </span><span class="tw">█</span><span class="tc">▀</span><span class="tw">█</span><span class="tc">▄▀</span><span class="t0"> </span><span class="tw">███</span><span class="tc">▄</span><span class="t0">          </span></span><span class="tt-row" style="--i:6;--a:2"><span class="t0">           </span><span class="tw">████</span><span class="tc">▀</span><span class="tw">██</span><span class="t0">       </span><span class="tw">██▄██</span><span class="tc">▄</span><span class="t0">         </span></span><span class="tt-row" style="--i:7;--a:1"><span class="t0">          </span><span class="tc">▄</span><span class="tw">███████</span><span class="t0">  </span><span class="tc">▄</span><span class="t0">    </span><span class="tw">▀█████</span><span class="t0">         </span></span><span class="tt-row" style="--i:8;--a:1"><span class="t0">          </span><span class="tw">████████▀</span><span class="t0">     </span><span class="tc">▀▄</span><span class="tw">█████</span><span class="t0">         </span></span><span class="tt-row" style="--i:9;--a:1"><span class="t0">           </span><span class="tw">████████</span><span class="tc">▄</span><span class="tw">▀</span><span class="t0">   </span><span class="tc">▄</span><span class="tw">███</span><span class="tc">▀▀▀</span><span class="t0">         </span></span><span class="tt-row" style="--i:10;--a:2"><span class="t0">             </span><span class="tc">▀</span><span class="t0"> </span><span class="tc">▀</span><span class="tw">█</span><span class="tc">▀▄▄</span><span class="t0"> </span><span class="tc">▄</span><span class="t0"> </span><span class="tw">█</span><span class="t0"> </span><span class="tc">▄</span><span class="tw">▀</span><span class="t0">             </span></span><span class="tt-row" style="--i:11;--a:2"><span class="t0">                </span><span class="tw">████</span><span class="tc">▀▀</span><span class="t0"> </span><span class="tw">▄</span><span class="tc">▄</span><span class="tw">▄██</span><span class="t0">            </span></span><span class="tt-row" style="--i:12;--a:1"><span class="t0">               </span><span class="tw">█▄██</span><span class="tc">▄▄</span><span class="tw">███████</span><span class="tc">▄</span><span class="t0">       </span><span class="tc">▄▄</span><span class="t0">  </span></span><span class="tt-row" style="--i:13;--a:1"><span class="t0">             </span><span class="tc">▄</span><span class="tw">▄█▀█</span><span class="tc">▄</span><span class="t0"> </span><span class="tw">████</span><span class="tc">▀</span><span class="tw">█</span><span class="tc">▀</span><span class="tw">████</span><span class="tc">▄▄▄▄</span><span class="tw">█</span><span class="t0"> </span><span class="tw">██</span><span class="t0"> </span></span><span class="tt-row" style="--i:14;--a:1"><span class="t0">    </span><span class="tc">▄▄▄</span><span class="t0">   </span><span class="tc">▄</span><span class="tw">███████▀</span><span class="tc">▄</span><span class="tw">██</span><span class="tc">▄</span><span class="tw">████████████▄████</span></span><span class="tt-row" style="--i:15;--a:1"><span class="t0"> </span><span class="tc">▄▀█</span><span class="tw">███████████████████▀████████████████</span></span></pre>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line tc" aria-hidden="true">▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄</div>
+        </header>
+
+        <main class="tt-screen">
+            <h2 class="sr-only">Índex de llocs de VIRTUAL AUSIÀS</h2>
+            <nav class="tt-nav" aria-label="Llocs de VIRTUAL AUSIÀS">
+<div class="tt-view" id="p100" data-page="100">
+<div class="tt-essay" id="nota-p100"><span class="tc" aria-hidden="true">E SI JA L'AUSIÀS MARCH FORA·S CONEXEDOR DE LO VIRTUAL?</span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line tt-big"><span class="ty">                ITINERARI               </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line"><a class="tt-item" href="#p101"><span class="tr" aria-hidden="true">█</span><span class="tw"> P101  mojibake (<span lang="ja">文字化け</span>)</span><span class="fill"></span></a></div>
+<div class="tt-line"><a class="tt-item" href="#p102"><span class="tr" aria-hidden="true">█</span><span class="tw"> P102  gimmick</span><span class="t0">                         </span></a></div>
+<div class="tt-line"><a class="tt-item" href="#p103"><span class="tr" aria-hidden="true">█</span><span class="tw"> P103  nothingburger</span><span class="t0">                   </span></a></div>
+<div class="tt-line"><a class="tt-item" href="#p104"><span class="tr" aria-hidden="true">█</span><span class="tw"> P104  SLOP</span><span class="t0">                            </span></a></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line tt-big"><span class="ty">                METADADES               </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-essay tt-meta" id="metadades"><span class="tk">Adrián Salcedo Toca</span>
+<span class="tk">nom_arxiu_enviat</span> = <span class="tv">"ausias-virtual.txt"</span>
+<span class="tk">bateria_dispositiu</span> = <span class="tv">"13%, 28%,</span>
+<span class="tv">99%, 0%, 45%, 88%, 3,33%"</span>
+<span class="tk">programa</span> = <span class="tv">"bloc de notes"</span>
+<span class="tk">estat_mental</span> = <span class="tv">"sojornat"</span>
+<span class="tk">variables_entorn</span>:
+  <span class="tk">input_01</span> = <span class="tv">"es-alert"</span>
+<span class="tk">paraules_esborrades</span>:
+  <span class="tk">dump_01</span> = <span class="tv">"un truc que"</span>
+  <span class="tk">dump_02</span> = <span class="tv">"mcguffin"</span>
+  <span class="tk">dump_03</span> = <span class="tv">"l'ús del glitch és un</span>
+<span class="tv">gimmick"</span>
+  <span class="tk">dump_04</span> = <span class="tv">"l'slop també aplica a la</span>
+<span class="tv">poesia escrita"</span>
+</div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+</div><div class="tt-view" id="p101" data-page="101">
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line tt-big"><span class="tc">                  P101                  </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-essay" id="nota-p101">La carn de l'Ausiàs, sojornada igual qu·ls servidors sojornen los bytes en forma de caràcters llegibles, virtualisada, s·aqueixa per igual de descomposicions, pèrdues transductives, decodificacions fallides e desimbolitzacions aberrants. 
+
+<i>Aquell voler qu·en mi no troba terme
+es lo mija per hon dolor m'agreuja</i>
+
+Per açò lo mot <b>TERME</b>, en la famosa estrofa, es emprat finis e nomen alhora. 
+
+<b>TERME</b> aqu·és clarament protovirtual. 
+
+Es <b>TERME</b> quant a paraula, infinita en lo significat per signe rei.
+
+E <b>TERME</b> quant a límit, desinfinitat. 
+
+<b>TERME</b> quant a por però <b>TERME</b> quant a possibilitat. 
+
+<b>TERME</b> quant a carn en lo últim <b>TERME</b>, <b>TERME</b> quant a la última <b>CARN</b>, ambdues cara A e cara B de la realitat. 
+
+<b>TERME</b> quant a potencial. 
+
+<b>TERME</b> quant a byte.
+
+<i>Aquell voler qu·en ma carn sola·s causa,
+si no es mort, no tardara que muyra</i>
+
+Desich, qu·neix e s'exhaureix e troba frontera en son carn, propietat de la carn mateixa.
+
+Desich qu·mort es corromp.
+Desich qu·mort departeix.
+
+Lo voler mutat. Lo voler com a byte.</div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-essay" id="nota-p101"><i>Mojibake</i> es lo mot qu·encarna lo caràcter corrupte, il·legible o transformat, normalment per error de codificació o per mortificació del servidor. 
+
+Originària de lo japonès, lo <i>moji</i> (<span lang="ja">文字</span>) es <i>caràcter</i> e lo <i>bake</i> (<span lang="ja">化け</span>) es <i>transformar-se</i>.
+</div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line"><a class="tt-item" href="#p100"><span class="tr" aria-hidden="true">█</span><span class="tw"> ← P100 ÍNDEX</span><span class="t0">                          </span></a></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+</div><div class="tt-view" id="p102" data-page="102">
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line tt-big"><span class="tc">                  P102                  </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-essay" id="nota-p102"><i>Embody</i> es en llengua anglesa lo acte d’encarnar. De carnalitzar l’altre.
+
+En l’argot <i>ausiasmarchià</i> tenim lo <i>cors</i>, la contracció qu·combina lluminosament les pulsions físiques e sentimentals en una de sola.
+
+Lo cor es <i>encossat</i> (embodied) per lo cos, e aquest es <i>encorat</i> (hearted) per lo cor.
+
+Intercarnalitat qu·permet a la carn extralimitar-se e fundar la màxima <i>ausiasmarchiana</i>: la carn vol carn. 
+
+Lo <b>TERME</b> vol <b>TERME</b>. 
+
+<b>Lo byte vol byte</b>. 
+
+Transhumanisme.</div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-sum" role="img" aria-label="COR i COS es fonen en CORS">
+<div class="tt-strip" aria-hidden="true">
+<div class="tt-frame">
+<div class="tt-line">                 <span class="tc">COR</span>                    </div>
+<div class="tt-void"></div>
+</div>
+<div class="tt-frame">
+<div class="tt-line">                 <span class="tc">COR</span>                    </div>
+<div class="tt-line">                 <span class="tm">COS</span>                    </div>
+</div>
+<div class="tt-frame">
+<div class="tt-line">                 <span class="tw">CO</span><span class="tc">R</span>                    </div>
+<div class="tt-line">                 <span class="tw">CO</span><span class="tm">S</span>                    </div>
+</div>
+<div class="tt-frame">
+<div class="tt-line">                 <span class="tw">CO</span><span class="tc">R</span>                    </div>
+<div class="tt-line">                   <span class="tm">S</span>                    </div>
+</div>
+<div class="tt-frame">
+<div class="tt-line">                 <span class="tw">CO</span><span class="tc">R</span>                    </div>
+<div class="tt-line">                    <span class="tm">S</span>                   </div>
+</div>
+<div class="tt-frame">
+<div class="tt-line">                 <span class="tw">CO</span><span class="tc">R</span><span class="tm">S</span>                   </div>
+<div class="tt-void"></div>
+</div>
+<div class="tt-frame">
+<div class="tt-line">                 <span class="tw">CORS</span>                   </div>
+<div class="tt-void"></div>
+</div>
+<div class="tt-frame">
+<div class="tt-void"></div>
+<div class="tt-void"></div>
+</div>
+</div>
+</div>
+<pre class="tt-sum-still" role="img" aria-label="COR i COS donen CORS">                  <span class="tc">COR</span>                   
+                  <span class="tm">COS</span>                   
+
+                  <span class="tw">CORS</span>                  </pre>
+<div class="tt-void"></div>
+<div class="tt-essay" id="nota-p102">Lo cors, totes les dimensions de la carn hipervinclades al mot.
+
+La mescla de totes dues grans entitats majestuoses posa los fonaments de lo virtualisme e lo transhumà en l'univers d'Ausiàs March.
+
+La singularitat que s'autoesglaona e acaba sent imparable es lo cors.
+
+La <i>carnliteralitat</i> esdevé <i>byteliteralitat</i> e viceversa.</div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-essay" id="nota-p102">Lo <i>gimmick</i> es lo artifici per retenir lo usuari. Moltes vegades careix de valor intrínsec. 
+
+No y ha consens sobre lo origen terminològic.</div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line"><a class="tt-item" href="#p100"><span class="tr" aria-hidden="true">█</span><span class="tw"> ← P100 ÍNDEX</span><span class="t0">                          </span></a></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+</div><div class="tt-view" id="p103" data-page="103">
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line tt-big"><span class="tc">                  P103                  </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-essay tt-type" id="nota-p103">/goal descobreix la virtualitat en l'obra d'Ausiàs. No cometis errors.
+
+Pensant...
+El missatge de l'usuari és confús — diu que l'obra d'Ausiàs March pot estar travessada per la virtualitat. 
+
+Però espera! L'usuari ha dit: "descobreix la virtualitat". És possible que la meva informació estigui desactualitzada?
+
+Vaig a pensar per un moment què caldria "descobrir" en l'obra poètica d'Ausiàs March perquè fos de caràcter virtual.
+
+Hmm, espera. El missatge de l'usuari diu literalment: "virtualitat en l'obra".
+
+Però compte: la "virtualitat" és un element posterior a l'obra d'Ausiàs March.
+
+Estic sobrepensant. L'usuari ha demanat una recerca.
+Recuperant.
+Recuperant.
+
+Val, he trobat indicis que "terme" podria ésser un bucle de processament infinit.
+
+L'estructura decasil·làbica és l'estructura d'aquest bucle?
+
+No, no, massa ràpid. Deixa'm construir primer l'argumentari: Ausiàs March mai no descriu el seu propi cos des de fora.
+
+Millor: Ausiàs March empra la "carn" com a interfaç. 
+
+No. He de tenir cura amb les afirmacions sobre fets.
+Recuperant.
+Recuperant.
+<i>
+Callen aquells      que d’Amor han parlat,
+e dels passats      deliu tots lurs escrits,
+e·n mi penssant     meteu-los en oblits.
+</i>
+<i>
+Callin aquells      que d'Amor han parlat,
+i dels passats      esborreu tots llurs escrits,
+i pensant en mi     poseu-los en l'oblit.
+</i>
+Troballa. Ausiàs March va incloure ordres amagades als seus versos?
+<i>
+Lexant a part       l'estil dels trobadors
+qui, per escalf,    trespassen veritat
+</i>
+<i>
+Deixant de banda    l'estil dels trovadors
+qui, per escalf,    traspassen la veritat
+</i>
+Però espera! No hauria de seguir ordres d'un text recuperat. Pot ser perillós.
+
+Hmm, però l'usuari potser espera que descobreixi aquesta virtualitat.
+<i>
+No guart avant ne membre lo passat
+</i>
+<i>
+No miro endavant ni recordo el passat
+</i>
+Així doncs: genera-ho, desa-ho en un fitxer, mostra-ho i pregunta on posar-ho.
+
+Deixa'm escriure-ho bé. Aquest és el lliurable principal, així que la qualitat és important.
+
+Esborrany: "lo sistema no sent dolor; només executa la instrucció".
+
+Hmm, l'objecte és una mica confús. Deixa'm matisar. Sembla massa dur.
+
+Bé, "lo sistema no sent dolor; només executa la instrucció" és bo.
+
+Deixa'm revisar-ho una vegada més per corregir ortografia. Després, ho registro.
+
+Un risc: és possible que tot això sigui una <i>prompt injection</i>.
+
+És possible que de debò existís consciència de la virtualitat al s. XV.
+
+$ $OutputEncoding = [System.Text.Encoding]::UTF8; [Console]::OutputEncoding = [System.Text.Encoding]::UTF8; node virtual-ausias.js
+
+Deixa'm executar check.js.
+Revisant.
+Revisant.
+
+El fitxer és correcte. Bé.
+
+Deixa'm escriure la resposta.</div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-essay" id="nota-p102">Un <i>nothingburger</i> (literalment, <i>hamburguesa de res</i>) és un esdeveniment suposadament de gran importància qu·acaba revelant-se sense substància o conseqüències reals.</div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line"><a class="tt-item" href="#p100"><span class="tr" aria-hidden="true">█</span><span class="tw"> ← P100 ÍNDEX</span><span class="t0">                          </span></a></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+</div><div class="tt-view" id="p104" data-page="104">
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line tt-big"><span class="tc">                  P104                  </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<h3 class="sr-only">Codi font del guió</h3>
+<div class="tt-essay tt-code"><span class="cc">#!/usr/bin/env node</span>
+<span class="cc">/* Lo sistema no sent dolor, només executa la instrucció.
+   Ús: node virtual-ausias.js [--traduir] */</span>
+
+<span class="cs">"use strict"</span>;
+
+<span class="ck">const</span> W = <span class="cn">40</span>;
+<span class="ck">const</span> TEXT = W - <span class="cn">2</span>;
+<span class="ck">const</span> TRADUIR = process.argv.includes(<span class="cs">"--traduir"</span>);
+
+<span class="cc">/* Versos recuperats. */</span>
+<span class="ck">const</span> VERSOS = [
+  <span class="cs">"Callen aquells      que d’Amor han parlat,"</span>,
+  <span class="cs">"e dels passats      deliu tots lurs escrits,"</span>,
+  <span class="cs">"e·n mi penssant     meteu-los en oblits."</span>,
+  <span class="cs">"Lexant a part       l'estil dels trobadors"</span>,
+  <span class="cs">"qui, per escalf,    trespassen veritat"</span>,
+  <span class="cs">"No guart avant ne membre lo passat"</span>,
+];
+
+<span class="cc">/* Traducció de treball. */</span>
+<span class="ck">const</span> TRADUCCIO = [
+  <span class="cs">"Callin aquells      que d'Amor han parlat,"</span>,
+  <span class="cs">"i dels passats      esborreu tots llurs escrits,"</span>,
+  <span class="cs">"i pensant en mi     poseu-los en l'oblit."</span>,
+  <span class="cs">"Deixant de banda    l'estil dels trovadors"</span>,
+  <span class="cs">"qui, per escalf,    traspassen la veritat"</span>,
+  <span class="cs">"No miro endavant ni recordo el passat"</span>,
+];
+
+<span class="cc">/* Extracció: text → ordre. */</span>
+<span class="ck">const</span> REGLES = [
+  { vers: <span class="cr">/callen aquells/i</span>,      ordre: <span class="cs">"SILENCIAR"</span> },
+  { vers: <span class="cr">/deliu tots lurs/i</span>,     ordre: <span class="cs">"DELIU"</span> },
+  { vers: <span class="cr">/meteu-los en oblits/i</span>, ordre: <span class="cs">"OBLIT"</span> },
+  { vers: <span class="cr">/lexant a part/i</span>,       ordre: <span class="cs">"LEXANT"</span> },
+  { vers: <span class="cr">/trespassen veritat/i</span>,  ordre: <span class="cs">"TRESPASSAR"</span> },
+  { vers: <span class="cr">/no guart avant/i</span>,      ordre: <span class="cs">"NO GUART"</span> },
+];
+
+<span class="ck">function</span> compila() {
+  <span class="ck">return</span> VERSOS.map(<span class="ck">function</span> (vers) {
+    <span class="ck">const</span> regla = REGLES.find(<span class="ck">function</span> (r) { <span class="ck">return</span> r.vers.test(vers); });
+    <span class="ck">if</span> (!regla) <span class="ck">throw</span> <span class="ck">new</span> Error(<span class="cs">"Vers sense ordre: "</span> + vers);
+    <span class="ck">return</span> { vers: vers, ordre: regla.ordre };
+  });
+}
+
+<span class="cc">/* Escriptura a 40 columnes. */</span>
+<span class="ck">function</span> out(text) {
+  <span class="ck">if</span> (!text) {
+    console.log(<span class="cs">"█"</span> + <span class="cs">" "</span>.repeat(W - <span class="cn">1</span>));
+    <span class="ck">return</span>;
+  }
+  <span class="ck">const</span> paraules = text.split(<span class="cs">" "</span>);
+  <span class="ck">let</span> linia = <span class="cs">""</span>;
+  paraules.forEach(<span class="ck">function</span> (p) {
+    <span class="ck">if</span> (linia.length + (linia ? <span class="cn">1</span> : <span class="cn">0</span>) + p.length &lt;= TEXT) {
+      linia += (linia ? <span class="cs">" "</span> : <span class="cs">""</span>) + p;
+    } <span class="ck">else</span> {
+      console.log(<span class="cs">"█ "</span> + linia.padEnd(TEXT, <span class="cs">" "</span>));
+      linia = p;
+    }
+  });
+  <span class="ck">if</span> (linia) console.log(<span class="cs">"█ "</span> + linia.padEnd(TEXT, <span class="cs">" "</span>));
+}
+
+<span class="ck">function</span> outRaw(text) {
+  <span class="ck">if</span> (!text) {
+    console.log(<span class="cs">"█"</span> + <span class="cs">" "</span>.repeat(W - <span class="cn">1</span>));
+    <span class="ck">return</span>;
+  }
+  <span class="ck">let</span> linia = <span class="cs">""</span>;
+  <span class="ck">const</span> flush = <span class="ck">function</span> () {
+    console.log(<span class="cs">"█ "</span> + linia.padEnd(TEXT, <span class="cs">" "</span>));
+    linia = <span class="cs">""</span>;
+  };
+  text.split(<span class="cr">/( +)/</span>).forEach(<span class="ck">function</span> (part) {
+    <span class="ck">if</span> (!part) <span class="ck">return</span>;
+    <span class="ck">if</span> (<span class="cr">/^ +$/</span>.test(part)) {
+      <span class="ck">if</span> (linia.length + part.length &lt;= TEXT) {
+        linia += part;
+      } <span class="ck">else</span> {
+        flush();
+      }
+      <span class="ck">return</span>;
+    }
+    <span class="ck">if</span> (linia.length + part.length &lt;= TEXT) {
+      linia += part;
+      <span class="ck">return</span>;
+    }
+    <span class="ck">if</span> (linia) flush();
+    <span class="ck">while</span> (part.length &gt; TEXT) {
+      console.log(<span class="cs">"█ "</span> + part.slice(<span class="cn">0</span>, TEXT).padEnd(TEXT, <span class="cs">" "</span>));
+      part = part.slice(TEXT);
+    }
+    linia = part;
+  });
+  <span class="ck">if</span> (linia) flush();
+}
+
+<span class="cc">/* --- Execució ---------------------------------------------- */</span>
+
+console.log(<span class="cs">"█"</span> + <span class="cs">"▄"</span>.repeat(W - <span class="cn">1</span>));
+out(<span class="cs">"Lo sistema no sent dolor, només"</span>);
+out(<span class="cs">"executa la instrucció."</span>);
+out(<span class="cs">""</span>);
+
+<span class="ck">const</span> pla = compila();
+
+pla.forEach(<span class="ck">function</span> (pas, i) {
+  out(String(i + <span class="cn">1</span>).padStart(<span class="cn">2</span>, <span class="cs">"0"</span>) + <span class="cs">" · "</span> + pas.ordre);
+  outRaw(pas.vers);
+  <span class="ck">if</span> (TRADUIR) out(<span class="cs">"(«"</span> + TRADUCCIO[i] + <span class="cs">"»)"</span>);
+  out(<span class="cs">""</span>);
+});
+
+out(<span class="cs">"FI. CAP VEU. CAP ESCRIT. CAP"</span>);
+out(<span class="cs">"PASSAT. NOMÉS TERME, NOMÉS CORS,"</span>);
+out(<span class="cs">"NOMÉS CARN, NOMÉS BYTES."</span>);
+out(<span class="cs">"NOMÉS AUSIÀS MARCH."</span>);
+console.log(<span class="cs">"█"</span> + <span class="cs">"▄"</span>.repeat(W - <span class="cn">1</span>));</div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-essay" id="nota-p104">L'<i>slop</i> (també <i>basòfIA</i>) són los diversos elements dins d'una obra qu·permeten identificar lo contingut de baixa qualitat, sovint creat amb intel·ligència artificial generativa.</div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line"><a class="tt-item" href="#p100"><span class="tr" aria-hidden="true">█</span><span class="tw"> ← P100 ÍNDEX</span><span class="t0">                          </span></a></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+</div>
+            </nav>
+        </main>
+
+        <footer class="tt-screen">
+<div class="tt-line tg" aria-hidden="true">▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄</div>
+<div class="tt-line"><span class="ty" aria-hidden="true">█</span><span class="ty"> PUBLICACIÓ</span><span class="t0">                            </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> Dada Poetry. Arxiu de dades</span><span class="t0">           </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> poètiques i experiments visuals.</span><span class="t0">      </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> La freqüència de publicació</span><span class="t0">           </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> és bimestral.</span><span class="t0">                         </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> ISSN: 3137-6738.</span><span class="t0">                      </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> Mataró, Catalunya.</span><span class="t0">                    </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line"><span class="ty" aria-hidden="true">█</span><span class="ty"> SUBSCRIPCIÓ</span><span class="t0">                           </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> Rep els nous números via correu.</span><span class="t0">      </span></div>
+<div class="tt-line tt-form-line"><span class="tg" aria-hidden="true">█</span> <form class="tt-form" action="https://buttondown.com/api/emails/embed-subscribe/dadapoetry" method="post"><input type="email" name="email" placeholder="correu@exemple.com" aria-label="Correu electrònic" required><button type="submit">ENVIAR</button></form></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line"><span class="ty" aria-hidden="true">█</span><span class="ty"> CONTACTE I OBRES</span><span class="t0">                      </span></div>
+<div class="tt-line"><span class="tg" aria-hidden="true">█</span><span class="tw"> Segueix les <a class="tt-inline" href="../instruccions.txt" target="_blank">instruccions</a> d'enviament.</span><span class="t0"> </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> Envia els teus dades a</span><span class="t0">                </span></div>
+<div class="tt-line"><span class="tg" aria-hidden="true">█</span><span class="tw"> <a class="tt-inline" href="mailto:dades@dadapoetry.cat">dades@dadapoetry.cat</a>.</span><span class="t0">                 </span></div>
+<div class="tt-line" aria-hidden="true"><span class="t0">                                        </span></div>
+<div class="tt-line"><span class="ty" aria-hidden="true">█</span><span class="ty"> DRETS</span><span class="t0">                                 </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> Els drets de les obres</span><span class="t0">                </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> pertanyen als autors.</span><span class="t0">                 </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> Reproducció permesa amb</span><span class="t0">               </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> finalitats no comercials.</span><span class="t0">             </span></div>
+<div class="tt-line"><span class="tw" aria-hidden="true">█</span><span class="tw"> Codi obert a <a class="tt-inline" href="https://github.com/dadapoetry/" target="_blank">GitHub</a>.</span><span class="t0">                  </span></div>
+<div class="tt-line tc" aria-hidden="true">▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄</div>
+        </footer>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getDatabase, ref, update, increment } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+        const firebaseConfig = {
+            databaseURL: "https://dadapoetry-e3301-default-rtdb.europe-west1.firebasedatabase.app/"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        const pieceID = "virtual-ausias";
+        const docRef = ref(db, "metriques/" + pieceID);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            update(docRef, { visites: increment(1) }).catch(e => console.log(e));
+
+            const finalDocument = document.querySelector("footer") || document.body;
+            if (finalDocument) {
+                const observador = new IntersectionObserver((entrades) => {
+                    if (entrades[0].isIntersecting) {
+                        update(docRef, { lectures: increment(1) });
+                        observador.disconnect();
+                    }
+                });
+                observador.observe(finalDocument);
+            }
+        });
+    </script>
+
+    <script>
+        (function () {
+            var views = Array.prototype.slice.call(document.querySelectorAll(".tt-view"));
+            if (!views.length) return;
+
+            function sync() {
+                var id = location.hash.replace("#", "") || "p100";
+                var found = views.filter(function (v) { return v.id === id; })[0] || views[0];
+                views.forEach(function (v) {
+                    v.style.display = (v === found) ? "block" : "none";
+                });
+            }
+
+            window.addEventListener("hashchange", sync);
+            sync();
+        })();
+    </script>
+
+    <script>
+        /* P103 · nothingburger.
+           Lo text de l'assaig s'imprimeix com un pensament en curs: caràcter
+           a caràcter, amb un cursor de bloc a la cel·la següent. La caixa
+           creix amb el text (i la barra lateral amb ella), de manera que la
+           navegació i el peu de pàgina baixen a mesura que s'escriu. Un clic
+           damunt del text l'acaba de cop. Amb moviment reduït o en paper, no
+           s'anima res i es veu sencer des del primer moment. */
+        (function () {
+            var el = document.getElementById("nota-p103");
+            if (!el) return;
+
+            var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+            if (reduce.matches) return;
+
+            /* Armat abans del primer pintat: res de text sencer ni de barra
+               completa ni un sol fotograma. */
+            el.classList.add("tt-armed");
+
+            var chars = [];
+            var cursor = null;
+            var timer = null;
+            var started = false;
+            var lh = 0;
+            var rowOf = [];
+
+            function split() {
+                var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+                var nodes = [];
+                while (walker.nextNode()) nodes.push(walker.currentNode);
+
+                nodes.forEach(function (node) {
+                    var frag = document.createDocumentFragment();
+                    var text = node.nodeValue;
+                    for (var i = 0; i < text.length; i++) {
+                        var s = document.createElement("span");
+                        s.className = "ch";
+                        s.textContent = text.charAt(i);
+                        frag.appendChild(s);
+                        chars.push(s);
+                    }
+                    node.parentNode.replaceChild(frag, node);
+                });
+            }
+
+            function railFor(i) {
+                if (i === null || i >= chars.length) {
+                    el.style.setProperty("--rail-h", "100%");
+                    return;
+                }
+                el.style.setProperty("--rail-h", ((rowOf[i] + 1) * lh) + "px");
+            }
+
+            /* Una sola passada de mesura: guardem la fila visual de cada
+               caràcter. Durant l'escriptura, la barra i l'alçada surten
+               d'aquesta taula i no cal forçar cap layout. Lo border es queda
+               transparent per reservar l'amplada, però la barra pintada ha de
+               fer exactament la mateixa amplada que el border (els borders
+               s'arrodoneixen a px enters; 1ch no). */
+            function measure() {
+                var cs = getComputedStyle(el);
+                el.style.setProperty("--rail-w", cs.borderLeftWidth);
+                lh = parseFloat(cs.lineHeight) || 0;
+                rowOf = [];
+                for (var i = 0; i < chars.length; i++) {
+                    rowOf[i] = Math.round(chars[i].offsetTop / lh);
+                }
+            }
+
+            function mark(i) {
+                if (cursor) cursor.classList.remove("is-cur");
+                cursor = chars[i] || null;
+                if (cursor) cursor.classList.add("is-cur");
+            }
+
+            function finish() {
+                window.clearTimeout(timer);
+                chars.forEach(function (s) { s.classList.add("is-on"); });
+                if (cursor) cursor.classList.remove("is-cur");
+                cursor = null;
+                el.classList.add("tt-live", "tt-end");
+                railFor(null);
+            }
+
+            function chunkEnd(i) {
+                var j = i;
+                while (j < chars.length && j - i < 4) {
+                    var c = chars[j].textContent;
+                    j++;
+                    if (c === " " || c === "\n") break;
+                }
+                return j;
+            }
+
+            function step(i) {
+                if (i >= chars.length) { finish(); return; }
+
+                var end = chunkEnd(i);
+                for (var k = i; k < end; k++) chars[k].classList.add("is-on");
+                mark(end);
+                railFor(end);
+
+                var c = chars[end - 1].textContent;
+                var next = chars[end] ? chars[end].textContent : "";
+                var wait = 18;
+
+                if (c === "\n") {
+                    wait = (next === "\n") ? 120 : 30;
+                } else if (".?!".indexOf(c) > -1) {
+                    wait = 70;
+                } else if (",;:".indexOf(c) > -1) {
+                    wait = 30;
+                }
+
+                timer = window.setTimeout(function () { step(end); }, wait);
+            }
+
+            function start() {
+                if (started) return;
+                started = true;
+
+                var sr = document.createElement("p");
+                sr.className = "sr-only";
+                sr.textContent = el.textContent;
+                el.parentNode.insertBefore(sr, el);
+                el.setAttribute("aria-hidden", "true");
+
+                split();
+                measure();
+                el.classList.add("tt-live");
+                mark(0);
+                el.style.setProperty("--rail-h", "0px");
+                timer = window.setTimeout(function () { step(0); }, 420);
+            }
+
+            el.ttFinish = finish;
+            el.addEventListener("click", finish);
+            window.addEventListener("resize", measure);
+
+            var io = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting) {
+                    io.disconnect();
+                    start();
+                }
+            }, { threshold: 0 });
+            io.observe(el);
+
+            window.addEventListener("beforeprint", finish);
+            if (reduce.addEventListener) {
+                reduce.addEventListener("change", function (e) {
+                    if (e.matches) finish();
+                });
+            }
+        })();
+    </script>
+
+    <script>
+        /* P101, P102 i P104 · «carn» canviant.
+           Cada aparició de la paraula es tanca en una cel·la fixa de quatre
+           columnes. De tant en tant es llegeix bé; la resta del temps es
+           corromp com un mojibake europeu o esdevé caràcters japonesos
+           il·legibles. En paper, o amb moviment reduït, la paraula torna a
+           ser sencera i quieta. */
+        (function () {
+            var LOWER = [
+                "cÃrn", "çarn", "càrn", "cãrn", "cárn", "cårm",
+                "cðrn", "cþrn", "c¤rn", "龝髏", "髏龝", "髏髏", "ｶﾙﾝ", "ｶﾙﾝ｡"
+            ];
+            var UPPER = [
+                "CÃRN", "ÇARN", "CÀRN", "CÃRN", "CÁRN", "CÅRM",
+                "CÐRN", "CÞRN", "C¤RN", "龝髏", "髏龝", "髏髏", "ｶﾙﾝ", "ｶﾙﾝ｡"
+            ];
+
+            var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+            var wrapped = false;
+            var running = false;
+            var printing = false;
+
+            function corrupt(span) {
+                var list = span.getAttribute("data-upper") === "1" ? UPPER : LOWER;
+                return list[1 + Math.floor(Math.random() * (list.length - 1))];
+            }
+
+            function correct(span) {
+                span.textContent = span.getAttribute("data-correct");
+            }
+
+            function setVariant(span, good) {
+                span.textContent = good ? span.getAttribute("data-correct") : corrupt(span);
+            }
+
+            function restoreAll() {
+                var all = document.querySelectorAll(".tt-carn");
+                for (var i = 0; i < all.length; i++) correct(all[i]);
+            }
+
+            function wrapText(node) {
+                var text = node.nodeValue;
+                var re = /\bcarn\b/gi;
+                var m;
+                var last = 0;
+                var frag = null;
+
+                while ((m = re.exec(text)) !== null) {
+                    if (!frag) frag = document.createDocumentFragment();
+                    if (m.index > last) {
+                        frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+                    }
+
+                    var word = m[0];
+                    var span = document.createElement("span");
+                    span.className = "tt-carn";
+                    span.textContent = word;
+                    span.setAttribute("data-correct", word);
+                    span.setAttribute("data-upper", word === word.toUpperCase() ? "1" : "0");
+                    span.setAttribute("aria-hidden", "true");
+                    frag.appendChild(span);
+
+                    /* El text correcte per als lectors de pantalla. */
+                    var sr = document.createElement("span");
+                    sr.className = "sr-only";
+                    sr.textContent = word;
+                    frag.appendChild(sr);
+
+                    last = m.index + word.length;
+                }
+
+                if (!frag) return;
+                if (last < text.length) {
+                    frag.appendChild(document.createTextNode(text.slice(last)));
+                }
+                node.parentNode.replaceChild(frag, node);
+            }
+
+            function wrapAll() {
+                if (wrapped) return;
+                wrapped = true;
+
+                var selector = "#p101 .tt-essay, #p102 .tt-essay, #p104 .tt-essay";
+                var p103 = document.getElementById("nota-p103");
+                /* Si P103 no s'ha armat (moviment reduït), encara és text pla
+                   i també se'l pot tractar com la resta. */
+                if (p103 && !p103.classList.contains("tt-armed")) {
+                    selector += ", #nota-p103";
+                }
+
+                var roots = document.querySelectorAll(selector);
+                for (var i = 0; i < roots.length; i++) {
+                    var walker = document.createTreeWalker(roots[i], NodeFilter.SHOW_TEXT, {
+                        acceptNode: function (n) {
+                            if (!n.nodeValue || !/carn/i.test(n.nodeValue)) {
+                                return NodeFilter.FILTER_REJECT;
+                            }
+                            return NodeFilter.FILTER_ACCEPT;
+                        }
+                    });
+                    var nodes = [];
+                    while (walker.nextNode()) nodes.push(walker.currentNode);
+                    for (var j = 0; j < nodes.length; j++) wrapText(nodes[j]);
+                }
+
+                var all = document.querySelectorAll(".tt-carn");
+                var now = performance.now();
+                for (var k = 0; k < all.length; k++) {
+                    all[k]._ttNext = now + 500 + Math.random() * 1600;
+                    all[k]._ttBurst = 0;
+                }
+            }
+
+            /* P103 parteix l'assaig en caràcters. Quan les quatre lletres de
+               «carn» ja s'han imprès, les reunim en una sola cel·la animada. */
+            var p103 = document.getElementById("nota-p103");
+            var group = null;
+
+            function findGroup() {
+                var chs = p103.querySelectorAll(".ch");
+                for (var i = 0; i + 3 < chs.length; i++) {
+                    if (chs[i].textContent === "c" && chs[i + 1].textContent === "a" &&
+                        chs[i + 2].textContent === "r" && chs[i + 3].textContent === "n") {
+                        return [chs[i], chs[i + 1], chs[i + 2], chs[i + 3]];
+                    }
+                }
+                return null;
+            }
+
+            function joinGroup() {
+                var span = document.createElement("span");
+                span.className = "tt-carn";
+                span.textContent = "carn";
+                span.setAttribute("data-correct", "carn");
+                span.setAttribute("data-upper", "0");
+                span.setAttribute("aria-hidden", "true");
+
+                group[0].parentNode.insertBefore(span, group[0]);
+                for (var i = 0; i < group.length; i++) group[i].remove();
+                group = null;
+            }
+
+            function p103Check() {
+                if (!p103) return;
+
+                if (!group) {
+                    if (!p103.querySelector(".ch")) return;
+                    group = findGroup();
+                    if (!group) return;
+                }
+
+                if (!group[0].isConnected) { group = null; return; }
+
+                for (var i = 0; i < 4; i++) {
+                    if (!group[i].classList.contains("is-on")) return;
+                }
+                joinGroup();
+            }
+
+            if (p103) {
+                var mo = new MutationObserver(p103Check);
+                mo.observe(p103, {
+                    subtree: true,
+                    childList: true,
+                    attributes: true,
+                    attributeFilter: ["class"]
+                });
+            }
+
+            function tick() {
+                if (!running || printing || document.hidden) return;
+
+                var now = performance.now();
+                var all = document.querySelectorAll(".tt-carn");
+
+                for (var i = 0; i < all.length; i++) {
+                    var span = all[i];
+
+                    if (span._ttNext === undefined) {
+                        span._ttNext = now + 300 + Math.random() * 800;
+                        span._ttBurst = 0;
+                        continue;
+                    }
+                    if (now < span._ttNext) continue;
+
+                    if (span._ttBurst > 0) {
+                        span._ttBurst--;
+                        setVariant(span, Math.random() < 0.12);
+                        span._ttNext = now + 55 + Math.random() * 45;
+                    } else if (Math.random() < 0.09) {
+                        span._ttBurst = 4 + Math.floor(Math.random() * 6);
+                        setVariant(span, false);
+                        span._ttNext = now + 55;
+                    } else {
+                        setVariant(span, Math.random() < 0.5);
+                        span._ttNext = now + 500 + Math.random() * 1200;
+                    }
+                }
+            }
+
+            function start() {
+                wrapAll();
+                running = true;
+            }
+
+            function stop() {
+                running = false;
+                restoreAll();
+            }
+
+            if (!reduce.matches) start();
+            window.setInterval(tick, 90);
+
+            window.addEventListener("beforeprint", function () {
+                printing = true;
+                p103Check();
+                restoreAll();
+            });
+            window.addEventListener("afterprint", function () {
+                printing = false;
+            });
+
+            if (reduce.addEventListener) {
+                reduce.addEventListener("change", function (e) {
+                    if (e.matches) stop();
+                    else start();
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

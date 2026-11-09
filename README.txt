@@ -49,7 +49,7 @@ Executant...
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-PARTICIPA EN EL TERCER OBJECTE DE DADES POÈTIC
+PARTICIPA EN EL QUART OBJECTE DE DADES POÈTIC
 
 Troba les instruccions d'enviament a https://dadapoetry.cat/cridaoberta.txt.
 Envia fins a 5 dades a dades@dadapoetry.cat.
@@ -61,6 +61,7 @@ La publicació de Dada Poetry és bimestral. Cada dos mesos es publicarà un obj
 Números publicats fins ara:
   [1] Primer objecte de dades poètic — Juny 2026 — https://dadapoetry.cat/primer/numero-001.html
   [2] Segon objecte de dades poètic — Setembre 2026 — https://dadapoetry.cat/segon/numero-002.html
+  [3] Tercer objecte de dades poètic — Novembre 2026 — https://dadapoetry.cat/tercer/numero-003.html
 
 Sabotatge actiu:
   [1] Primer sabotatge de dades poètic — Setembre 2026 — https://dadapoetry.cat/sabotatges/sabotatge-001.html

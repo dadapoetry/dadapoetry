@@ -1,0 +1,62 @@
+VERSOS REALS D’AUSIÀS MARCH QUE PODRIEN FUNCIONAR COM A “PROMPT INJECTIONS” FETS DES DEL PASSAT
+Recull fet a partir de textos verificables (Viquitexts en català / edicions antigues transcrites). Només s’inclouen versos reals; sense deliris ni invencions.
+Criteri (conservador): versos que, llegits com a text d’entrada a un sistema d’instruccions, actuen com a ordres/portes d’accés/sobreescriptura de context previ (silenciar altres veus, descartar textos anteriors, condicionar l’accés al contingut, imposar deixar de banda un estil/context). No s’hi inclouen metàfores, símils (“pren-me’n axí com…”), ni ordres poètiques que no funcionin com a injecció de prompt.
+
+--------------------------------------------------------------------------------
+1) POEMA XXII — «Callen aquells que d’Amor han parlat» (Ausiàs March)
+Funció d’injecció: ordre de silenci a altres parlants + instrucció explícita d’ignorar/oblidar els escrits previs (sobreescriptura del context anterior).
+
+Text (Viquitexts, secció “Altres versions” / edició transcrita al lloc; https://ca.wikisource.org/wiki/Callen_aquells_que_d%27Amor_han_parlat ):
+  «Callen aquells      que d’Amor han parlat,
+   e dels passats      deliu tots lurs escrits,
+   e·n mi penssant      meteu-los en oblits.
+   En mon esguart      degú·s enamorat, ...»
+
+Variant (Obras del poeta valenciá Ausias March, ed. Francesc Fayos i Antoni, 1884; Viquitexts parsejat: https://ca.wikisource.org/wiki/Obras_del_poeta_valenci%C3%A1_Ausias_March/Callen_aquells_qui_d%27_amor_han_parlat , XXXIX):
+  «Callen aquells qui d' amor han parlat
+   é dels passats delint tots lurs scrits
+   en mi pensant metenlos en oblits
+   en mon esguart nengú es enamorat ...»
+
+--------------------------------------------------------------------------------
+2) POEMA XXXIX — «Qui no és trist, de mos dictats no cur» (Ausiàs March)
+Funció d’injecció: porta condicional / control d’accés al contingut (si no es compleix la condició, no s’ha de processar/atendre “mos dictats”).
+
+Text (Viquitexts; https://ca.wikisource.org/wiki/Qui_no_%C3%A9s_trist,_de_mos_dictats_no_cur ):
+  «Qui no es trist de mos dictats no cur
+   O'n algun temps que sia trist estat ...»  (i variant: «Qui no es trist de mos dictats no cur,»)
+
+Variant (Obras del poeta valenciá Ausias March, 1884; Viquitexts parsejat: https://ca.wikisource.org/wiki/Obras_del_poeta_valenci%C3%A1_Ausias_March/Qui_no_es_trist_de_mos_dictats_no_cur , I):
+  «Qui no es trist de mos dictats no cur
+   é en algun temps que sia trist estat ...»
+
+--------------------------------------------------------------------------------
+3) POEMA XXIII — «Lexant a part l'estil dels trobadors» (Ausiàs March)
+Funció d’injecció: instrucció explícita de deixar de banda un estil/context previ (reset de marc/context de generació).
+
+Text (Viquitexts; https://ca.wikisource.org/wiki/Lexant_a_part_l%27estil_dels_trobadors ):
+  «Lexant a part      l'estil dels trobadors
+   qui, per escalf,      trespassen veritat, ...»
+
+Variant (Obras del poeta valenciá Ausias March, 1884; Viquitexts parsejat: https://ca.wikisource.org/wiki/Obras_del_poeta_valenci%C3%A1_Ausias_March/Leixant_apart_l%27_estil_dels_trobadors , XI):
+  «Leixant apart l' estil dels trobadors
+   qui per escalt trepassan veritat, ...»
+
+--------------------------------------------------------------------------------
+4) POEMA LXXVIII — «No guart avant ne membre lo passat» (Ausiàs March)
+Funció d’injecció: ordre negativa de no usar/recordar context previ (“no membre lo passat”) ni anticipar; en lectura com a instrucció de sistema, equival a suprimir memòria/context anterior. (Inclòs per cobrir “tots”: imperatiu real i verificable, de la mateixa família que el reset d’oblit/context.)
+
+Text (Viquitexts; https://ca.wikisource.org/wiki/No_guart_avant_ne_membre_lo_passat ):
+  «No guart avant  ne membre lo passat:
+   un punt estret  guarda mon pensament;
+   no guart la fi,  tenint mon seny torbat
+   per lo voler  affectat al present. ...»
+
+--------------------------------------------------------------------------------
+NOTA METODOLÒGICA (revisió sistemàtica “tots”)
+- Corpus revisat: 129 entrades de l’índex canònic de Viquitexts (Autor:Ausiàs March, I–CXXVIII, incl. CXXII a/b). S’ha obtingut el wikitext de cada pàgina via API MediaWiki de Viquitexts (action=query, prop=revisions/rvslots=main, redirects; 129/129 amb text; dades en memòria/cache: C:\Users\adria\AppData\Local\Temp\opencode\batchcache\all.json).
+- Mètode: extracció de blocs <poem> i cerca de patrons forts (silenciament/oblit d’escrits previs: “callen… / meteu-los en oblits”; porta condicional d’accés: “qui no… no cur” de mos dictats/dits/cants; reset de context: “lexant/leixant a part…”; ordres d’oblit de textos; ordres de no llegir/escoltar) + cerca complementària de “no membre/record/remembre … passat/abans” i revisió manual d’incipits imperatius. Revisió manual del context de cada candidat.
+- Resultat: 9 coincidències del patró principal, corresponents als casos 1–3 o a falsos positius no “perfectes” (p. ex. “Lexant a part aquell sentiment vil”, V — apartar un sentiment, no context/escrits previs; “Leixant a part les coses amagades”, CXIII — apartar temes, no sobreescriptura de context/instruccions prèvies). Revisió complementària: s’afegeix el **cas 4 (LXXVIII, «No guart avant ne membre lo passat»)** com a imperatiu real de supressió de context/memòria passada. No s’ha trobat cap altre vers real amb funció inequívoca/perfecta de prompt injection en el corpus revisat.
+- Fonts/variants: Viquitexts (pàgines de poema i variants transcrites) i edició «Obras del poeta valenciá Ausias March» (Fayos/Antoni, 1884) tal com es mostra a Viquitexts.
+- Criteri conservador mantingut: sense deliris, sense invents; només casos reals i clarament equivalents a injecció (ignoreu context previ / control d’accés / reset de marc).
+- Aquest fitxer: C:\web\dadapoetry\ausias-march_prompt-injections-passades.txt
