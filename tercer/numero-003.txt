@@ -5,6 +5,7 @@ Arxiu de dades poètiques i experiments visuals
 Tercer objecte de dades - novembre 2026
 UNA MÀQUINA QUE CRIDA OBERTAMENT
 ISSN: 3137-6738
+DOI: https://doi.org/10.5281/zenodo.24228029
 https://dadapoetry.cat
 
 **************************************************
@@ -790,6 +791,7 @@ Cada dos mesos es publicarà un objecte de dades amb les col·laboracions selecc
 Els drets dels dades pertanyen exclusivament als emissors.
 
 ISSN: 3137-6738
+DOI: https://doi.org/10.5281/zenodo.24228029
 
 Reproducció permesa amb finalitats no comercials.
 El codi de l'arxiu és obert.
