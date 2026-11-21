@@ -254,7 +254,7 @@ Adrián Salcedo Toca
 
 E SI JA L'AUSIÀS MARCH FORA·S CONEXEDOR DE LO VIRTUAL?
 
-El Cross-Origin Resource Sharing (LO CORS) és un mecanisme de seguretat dels navegadors que utilitza capçaleres HTTP per controlar si una pàgina web d'un origen determinat pot accedir a recursos d'un origen diferent. 
+Lo Cross-Origin Resource Sharing (LO CORS) es lo mecanisme de seguretat de los navegadors que utilitza capçaleres HTTP per controlar si una pàgina web d'un origen determinat pot accedir a recursos d'un origen diferent. 
 
 P101 mojibake
 
