@@ -254,6 +254,8 @@ Adrián Salcedo Toca
 
 E SI JA L'AUSIÀS MARCH FORA·S CONEXEDOR DE LO VIRTUAL?
 
+El Cross-Origin Resource Sharing (LO CORS) és un mecanisme de seguretat dels navegadors que utilitza capçaleres HTTP per controlar si una pàgina web d'un origen determinat pot accedir a recursos d'un origen diferent. 
+
 P101 mojibake
 
 La carn de l'Ausiàs, sojornada igual qu·ls servidors sojornen los bytes en forma de caràcters llegibles, virtualisada, s·aqueixa per igual de descomposicions, pèrdues transductives, decodificacions fallides e desimbolitzacions aberrants.
